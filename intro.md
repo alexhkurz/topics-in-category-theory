@@ -8,7 +8,7 @@
 
 These notes do not cover basic notions such as category, functor, natural transformations, Yoneda, epi, mono, factorization systems, limits (products, equalisers, pullbacks), colimits, adjunctions but I am happy to explain all of this in person.
 
-The general aim is to write these notes from the point of view of advanced category theory without assuming that reader has covered everything in basic category theory. Roughly speaking, in my view, basic category theory relies on diagram chasing while advanced category theory uses algebraic methods where equations are taken up to isomorphism.
+The general aim is to write these notes from the point of view of advanced category theory without assuming that reader has covered everything in basic category theory. Roughly speaking, in my view, basic category theory relies on diagram chasing while advanced category theory uses algebraic style of [reasoning with equations up to isomorphism](contents/category-theory-via-equations.md).
 
 The particular aim of Part1 is to explain the paper (cited by Tommaso Moraschini)
 
@@ -17,8 +17,8 @@ The particular aim of Part1 is to explain the paper (cited by Tommaso Moraschini
 ## Current Plan of Content
 
 Part 1:
-- [Regular and Exact Categories](https://hackmd.io/@alexhkurz/ByIHb3TB2) 
-- [Lawvere's Characterization of Varieties](https://hackmd.io/@alexhkurz/rktG2E0r2)
+- [Regular and Exact Categories](contents/regular-and-exact-categories.md) 
+- [Lawvere's Characterization of Varieties](contents/lawveres-characterization-of-varieties.md)
 - [Monads and the Lawvere-Linton Theorem]
 - [Lawvere Theories]
 - [Morita Equivalence of Varieties]

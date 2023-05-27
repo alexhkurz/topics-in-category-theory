@@ -4,7 +4,7 @@
 
 ## Introduction
 
-In a previous note on [Regular and Exact Categories](https://hackmd.io/@alexhkurz/ByIHb3TB2) we said that regular and exact categories generalise quasi-varities and varities. 
+In a previous note on [Regular and Exact Categories](../contents/regular-and-exact-categories.md) we said that regular and exact categories generalise quasi-varities and varities. 
 
 Lawvere's theorem turns this analogy into a theorem. 
 
@@ -35,11 +35,11 @@ $$\mathcal C(A+A,C)\cong Set(2,\mathcal (A,C)).$$
 
 **Definition:** An object $P$ in a regular category $\mathcal C$ is **regular projective** (or just **projective** for short) if for every regular epi $e:A\to B$ and for every $f:P\to B$ there is $P\to B$ such that
 
-![](https://hackmd.io/_uploads/r1Qa5HRrn.png =500x)
+<img src="../img/projective.png" width="500px">
 
 commutes.
 
-**Remark:** Also we didn't make this explicit, one can see that the definition of projective object is parametric in a class of "epis" $e$. There are various other interesting classes of epis, but in our context we will only be interested in regular epis. Remember that in the context of universal algebra, the regular epis are exactly the surjections.
+**Remark:** Although we didn't make this explicit, one can see that the definition of projective object is parametric in a class of "epis" $e$. There are various other interesting classes of epis, but in our context we will only be interested in regular epis. Remember that in the context of universal algebra, the regular epis are exactly the surjections.
 
 The following observation is pivotal.
 
@@ -157,4 +157,5 @@ nLab:
 
 ## Diagrams
 
-https://q.uiver.app/#q=WzAsMyxbMCwwLCJBIl0sWzIsMCwiQiJdLFsxLDIsIlAiXSxbMCwxLCJlIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIsMCwiZyIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDEsImYiLDJdXQ==
+[projective](https://q.uiver.app/#q=WzAsMyxbMCwwLCJBIl0sWzIsMCwiQiJdLFsxLDIsIlAiXSxbMCwxLCJlIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIsMCwiZyIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDEsImYiLDJdXQ==)
+

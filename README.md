@@ -2,7 +2,7 @@
 
 Created from [this template](https://github.com/alexhkurz/template-for-jupyter-book).
 
-To create the book locally and open it in my browser, I run (the `open` command may be specific to a mac)
+To make the book locally and open it in my browser, I run (the `open` command may be specific to a mac)
 
 ```
 jb build . ; open _build/html/index.html
