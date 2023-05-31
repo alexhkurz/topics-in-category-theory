@@ -38,11 +38,11 @@ An arrow that arises as a coequalizer is called  a **regular epi**.
 - Find a pullback $(p,q)$ of $(j,k)$ in the category of posets where $k$ is a regular epi but $p$ is not.
 
 **Exercises**:
-- In the category of monoids, the inclusion $(\mathbb N,0,+)\to (\mathbb Z,0,+)$ is epi but not regular epi.
+- (Epis don't need to be surjective.) In the category of monoids, the inclusion $(\mathbb N,0,+)\to (\mathbb Z,0,+)$ is epi but not regular epi.
 - In a regular category, every morphism factors as a regular epi followed by a mono.[^factorization]
 - In a regular category, the composition of regular epis is regular.[^compRegEpi]
 
-[^factorization]: To factorize $f$, we observe that the coequalizer $e$ of the kernel pair of $f$ is a regular epi. The universal property of a coequalizer allows us to factor $f=m\circ e$. We need to show that $m$ is mono. This needs a lemma, namely that an arrow is mono iff the two legs of its kernel pair are equal. 
+[^factorization]: To factorize $f$, we observe that the coequalizer $e$ of the kernel pair of $f$ is a regular epi. The universal property of a coequalizer allows us to factor $f=m\circ e$. We want to show that $m$ is mono. This needs two lemmas. First, that an arrow is mono iff the two legs of its kernel pair are equal. Second, that "pulling $e$ back along the kernel pairs of $f$ and $m$" (it needs to be made precise what that means) results in an epi.
 
 [^compRegEpi]: This needs some work. One can show that, in a regular category, regular epis and strong epis coincide and then use that strong epis are closed under composition.
 

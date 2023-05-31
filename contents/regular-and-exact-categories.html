@@ -36,6 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -418,7 +419,7 @@ document.write(`
 </ul>
 <p><strong>Exercises</strong>:</p>
 <ul class="simple">
-<li><p>In the category of monoids, the inclusion <span class="math notranslate nohighlight">\((\mathbb N,0,+)\to (\mathbb Z,0,+)\)</span> is epi but not regular epi.</p></li>
+<li><p>(Epis don’t need to be surjective.) In the category of monoids, the inclusion <span class="math notranslate nohighlight">\((\mathbb N,0,+)\to (\mathbb Z,0,+)\)</span> is epi but not regular epi.</p></li>
 <li><p>In a regular category, every morphism factors as a regular epi followed by a mono.<a class="footnote-reference brackets" href="#factorization" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></li>
 <li><p>In a regular category, the composition of regular epis is regular.<a class="footnote-reference brackets" href="#compregepi" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p></li>
 </ul>
@@ -465,7 +466,7 @@ document.write(`
 </aside>
 <aside class="footnote brackets" id="factorization" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
-<p>To factorize <span class="math notranslate nohighlight">\(f\)</span>, we observe that the coequalizer <span class="math notranslate nohighlight">\(e\)</span> of the kernel pair of <span class="math notranslate nohighlight">\(f\)</span> is a regular epi. The universal property of a coequalizer allows us to factor <span class="math notranslate nohighlight">\(f=m\circ e\)</span>. We need to show that <span class="math notranslate nohighlight">\(m\)</span> is mono. This needs a lemma, namely that an arrow is mono iff the two legs of its kernel pair are equal.</p>
+<p>To factorize <span class="math notranslate nohighlight">\(f\)</span>, we observe that the coequalizer <span class="math notranslate nohighlight">\(e\)</span> of the kernel pair of <span class="math notranslate nohighlight">\(f\)</span> is a regular epi. The universal property of a coequalizer allows us to factor <span class="math notranslate nohighlight">\(f=m\circ e\)</span>. We want to show that <span class="math notranslate nohighlight">\(m\)</span> is mono. This needs two lemmas. First, that an arrow is mono iff the two legs of its kernel pair are equal. Second, that “pulling <span class="math notranslate nohighlight">\(e\)</span> back along the kernel pairs of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(m\)</span>” (it needs to be made precise what that means) results in an epi.</p>
 </aside>
 <aside class="footnote brackets" id="compregepi" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>

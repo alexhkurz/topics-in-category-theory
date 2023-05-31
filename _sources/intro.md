@@ -16,15 +16,28 @@ The particular aim of Part1 is to explain the paper (cited by Tommaso Moraschini
 
 ## Current Plan of Content
 
-Part 1:
+Part 0: General Topics
+
+- [Yoneda Lemma](contents/category-theory-via-equations.md)
+- [Adjunctions and Monads in a 2-Category]
+- [Reflective Subcategories](https://hackmd.io/@alexhkurz/BkRKr1rss)
+- [Monads]
+- [Factorisation Systems]
+
+Part 1: Universal Algebra
+
 - [Regular and Exact Categories](contents/regular-and-exact-categories.md) 
 - [Lawvere's Characterization of Varieties](contents/lawveres-characterization-of-varieties.md)
 - [Monads and the Lawvere-Linton Theorem]
 - [Lawvere Theories]
 - [Morita Equivalence of Varieties]
 
-More topics:
+Part 2: Density and Completions of Categories:
+
 - [Locally finitely presentable categories]
+
+More Topics:
+
 - [HSP theorems]
 - ... to be continued if of interest ...
 
