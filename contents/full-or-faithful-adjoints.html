@@ -150,7 +150,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Topics in Category Theory
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -370,6 +370,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="full-or-faithful-adjoints">
 <h1>Full or Faithful Adjoints<a class="headerlink" href="#full-or-faithful-adjoints" title="Permalink to this heading">#</a></h1>
+<p>We present a theorem that is useful in many situations. It gives necessary and sufficient conditions for an adjoint to be full or to be faithful in terms of the (co)unit of the adjunction.</p>
 <p>Let <span class="math notranslate nohighlight">\(F:X\to A\)</span>, <span class="math notranslate nohighlight">\(G:A\to X\)</span>, <span class="math notranslate nohighlight">\(F\dashv G\)</span>, <span class="math notranslate nohighlight">\(\eta_x:x\to GFx\)</span>, <span class="math notranslate nohighlight">\(\epsilon_a:FGa\to a\)</span>.</p>
 <a class="reference internal image-reference" href="../_images/adjunction-full-faithful.png"><img alt="../_images/adjunction-full-faithful.png" src="../_images/adjunction-full-faithful.png" style="width: 600px;" /></a>
 <p>Mac Lane, page 88:</p>
@@ -414,13 +415,17 @@ document.write(`
 <p>For variety, we prove the dual of lemma and theorem.</p>
 <p><strong>Lemma:</strong> Let <span class="math notranslate nohighlight">\(f^\ast:X(-,y) \to X(-,z)\)</span> given by Yoneda for <span class="math notranslate nohighlight">\(f:y\to z\)</span>. Then <span class="math notranslate nohighlight">\(f^\ast\)</span> is componentwise injective iff <span class="math notranslate nohighlight">\(f\)</span> is mono and <span class="math notranslate nohighlight">\(f^\ast\)</span> is componentwise onto iff <span class="math notranslate nohighlight">\(f\)</span> is split epi.</p>
 <p><em>Proof:</em> This is straightforward from the respective definitions.</p>
-<p>To prove the dual of the theorem, consider
-$<span class="math notranslate nohighlight">\(X(x,y)\stackrel {F_{x,y}} \longrightarrow 
+<p>To prove the dual of the theorem, consider</p>
+<div class="math notranslate nohighlight">
+\[X(x,y)\stackrel {F_{x,y}} \longrightarrow 
 A(Fx,Fy) \stackrel \cong \longrightarrow 
-X(x,UFy)\)</span>$</p>
+X(x,UFy)\]</div>
 <p>which is the transformation natural in <span class="math notranslate nohighlight">\(x\)</span> determined (via Yoneda) by the unit <span class="math notranslate nohighlight">\(\eta_y:y\to UFy\)</span>.</p>
 <p>The lemma tells us that the natural transformation (hence <span class="math notranslate nohighlight">\(F_{x,y}\)</span>) is componentwise injective iff <span class="math notranslate nohighlight">\(\eta_y\)</span> is mono and is componentwise surjective iff <span class="math notranslate nohighlight">\(\eta_y\)</span> is split epi.</p>
-<p>We have shown that <span class="math notranslate nohighlight">\(F\)</span> is faithful iff the unit is componentwise mono and full iff the unit is componentwise split epi.</p>
+<p>We have shown that <span class="math notranslate nohighlight">\(F\)</span> is faithful iff the unit is componentwise mono and full iff the unit is componentwise split epi. QED</p>
+<p><strong>Example:</strong> The inclusion from Boolean algebras to distributive lattice has a faithful left adjoint. The unit includes a DL  <span class="math notranslate nohighlight">\(A\)</span> into the free BA over <span class="math notranslate nohighlight">\(A\)</span>, freely adding negation. That the unit is injective means that Boolean logic is conservative over positive logic (extending <span class="math notranslate nohighlight">\(A\)</span> by negation does not introduce new equations on <span class="math notranslate nohighlight">\(A\)</span>).</p>
+<p><strong>Example:</strong> If <span class="math notranslate nohighlight">\(X\)</span> is the category of sets and <span class="math notranslate nohighlight">\(A\)</span> is a category of algebras (a variety or quasi-variety), then the left-adjoint <span class="math notranslate nohighlight">\(F\)</span> (free construction) and the right-adjoint <span class="math notranslate nohighlight">\(G\)</span> (forgetful functor) are faithful. This corresponds to the unit (insertion of generators) being mono (injective) and the counit (algebraic structure) being epi (surjective).</p>
+<p><strong>Example:</strong> Let <span class="math notranslate nohighlight">\(X\)</span> be a category of algebras (variety) and <span class="math notranslate nohighlight">\(A\)</span> be a subvariety defined by imposing additional equations. Then the inclusion <span class="math notranslate nohighlight">\(G:A\to X\)</span> has a left-adjoint <span class="math notranslate nohighlight">\(F:X\to A\)</span>. The inclusion is full and faithful, hence the counit is iso. The unit <span class="math notranslate nohighlight">\(x\to GFx\)</span> takes the quotient of an algebra <span class="math notranslate nohighlight">\(x\)</span> wrt the equations, hence is epi but not necessarily split epi, so we cannot conclude that <span class="math notranslate nohighlight">\(F\)</span> is full. For example, …</p>
 <hr class="docutils" />
 <p><a class="reference external" href="https://q.uiver.app/#q=WzAsNixbMSwxLCJYIl0sWzMsMSwiQSJdLFswLDAsIngiXSxbMCwyLCJHRngiXSxbNCwwLCJGR2EiXSxbNCwyLCJhIl0sWzAsMSwiRiIsMCx7ImN1cnZlIjotMn1dLFsxLDAsIkciLDAseyJjdXJ2ZSI6LTJ9XSxbMCwxLCJcXGJvdCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDMsIlxcZXRhX3giLDFdLFs0LDUsIlxcdmFyZXBzaWxvbl9hIiwxXV0=">Diagrams</a></p>
 </section>

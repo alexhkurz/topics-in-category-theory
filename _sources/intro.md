@@ -1,4 +1,4 @@
-# Topics in Category Theory
+# Introduction
 
 (under construction)
 
@@ -16,13 +16,17 @@ The particular aim of Part1 is to explain the paper (cited by Tommaso Moraschini
 
 ## Current Plan of Content
 
-Part 0: General Topics
+Part 0: General Techniques
+
+The general techniques will come up in various situations. It makes some sense to put them at the beginning, but maybe this section should better be a collection of appendices.
 
 - [Yoneda Embedding](contents/yoneda.md)
 - [Adjunctions and Monads in a 2-Category]
 - [Reflective Subcategories](https://hackmd.io/@alexhkurz/BkRKr1rss)
 - [Monads]
+- [Extremal, Strong, Regular Epis]
 - [Factorisation Systems]
+- [Orthogonality]
 
 Part 1: Universal Algebra
 
@@ -39,6 +43,7 @@ Part 2: Density and Completions of Categories:
 More Topics:
 
 - [HSP theorems]
+- [Distributive Laws]
 - ... to be continued if of interest ...
 
 ## Further References

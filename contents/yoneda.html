@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Full or Faithful Adjoints" href="full-or-faithful-adjoints.html" />
-    <link rel="prev" title="Topics in Category Theory" href="../intro.html" />
+    <link rel="prev" title="Introduction" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -150,7 +150,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Topics in Category Theory
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -360,6 +360,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limits">Limits</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colimits">Colimits</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">The Yoneda Embedding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#order-enriched-categories">Order-Enriched Categories</a></li>
 </ul>
             </nav>
         </div>
@@ -389,7 +390,7 @@ document.write(`
 <h2>Limits<a class="headerlink" href="#limits" title="Permalink to this heading">#</a></h2>
 <p><strong>Categories:</strong> <span class="math notranslate nohighlight">\(A\times B\)</span> is the product of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> iff</p>
 <div class="math notranslate nohighlight">
-\[ \mathcal C(C,A\times B)\cong \mathcal C(C,A)\times  \mathcal C(C,B)\]</div>
+\[\mathcal C(C,A\times B)\cong \mathcal C(C,A)\times  \mathcal C(C,B)\]</div>
 <p>where the <span class="math notranslate nohighlight">\(\times\)</span> on the left is what is defined and the <span class="math notranslate nohighlight">\(\times\)</span> on the right is the ordinay cartesian product in Set.</p>
 <p><em>Exercise:</em> Generalize this to other limits.</p>
 <p><strong>Orders:</strong> <span class="math notranslate nohighlight">\(x\wedge y\)</span> is the meet of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> iff</p>
@@ -417,18 +418,18 @@ document.write(`
 <li><p>The Yoneda embedding is fully faithful.</p></li>
 </ul>
 <p>For every small<a class="footnote-reference brackets" href="#small" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> category <span class="math notranslate nohighlight">\(\mathcal C\)</span> there is a functor</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b722fe20-a0cf-4b14-99e6-7d437766612f">
-<span class="eqno">(1)<a class="headerlink" href="#equation-b722fe20-a0cf-4b14-99e6-7d437766612f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-960c3bac-2881-4a40-883c-2d5f73078db1">
+<span class="eqno">(1)<a class="headerlink" href="#equation-960c3bac-2881-4a40-883c-2d5f73078db1" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal C^{op}\times \mathcal C  &amp; \to \sf Set\\
 A\ ,B &amp; \mapsto \mathcal C(A,B)
 \end{align}\]</div>
 <p>The two Yoneda embeddings are obtained by fixing one of the coordinates</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5091f205-1baa-4a22-8b9b-1b67c011a887">
-<span class="eqno">(2)<a class="headerlink" href="#equation-5091f205-1baa-4a22-8b9b-1b67c011a887" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ae25383c-e3d6-42fa-a753-e6014984b727">
+<span class="eqno">(2)<a class="headerlink" href="#equation-ae25383c-e3d6-42fa-a753-e6014984b727" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal C(-,A) : \mathcal C^{op}  &amp; \to \sf Set\\
 \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-19a9ed26-6e0c-4b74-8db0-bce3e8927bbd">
-<span class="eqno">(3)<a class="headerlink" href="#equation-19a9ed26-6e0c-4b74-8db0-bce3e8927bbd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4e5885a1-7517-4610-8257-beeecc67c27b">
+<span class="eqno">(3)<a class="headerlink" href="#equation-4e5885a1-7517-4610-8257-beeecc67c27b" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal C(A,-) : \mathcal C  &amp; \to \sf Set\\
 \end{align}\]</div>
 <ul class="simple">
@@ -442,6 +443,20 @@ A\ ,B &amp; \mapsto \mathcal C(A,B)
 <li><p>The case of products (or limits) uses the same steps of reasoning as the case of monos. The case of coproducts (or colimits) is dual again.</p></li>
 </ul>
 <p><strong>Exercise:</strong> Show that the Yoneda embedding preserves limits, that is, if <span class="math notranslate nohighlight">\(C\cong\lim D\)</span> then <span class="math notranslate nohighlight">\(\mathcal C(X,C)\cong\lim\mathcal C(X,D)\)</span>. <a class="footnote-reference brackets" href="#functorcategory" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+</section>
+<section id="order-enriched-categories">
+<h2>Order-Enriched Categories<a class="headerlink" href="#order-enriched-categories" title="Permalink to this heading">#</a></h2>
+<p>Many categories have more structure than just being a category. For example, in a category of ordered structures one can define an order on morphisms pointwise. Then homsets are ordered sets, typically partial orders (posets). Given such a category <span class="math notranslate nohighlight">\(\mathcal C\)</span>, we have a functor</p>
+<div class="math notranslate nohighlight">
+\[\mathcal C(-,-):\mathcal C^{op}\times\mathcal C\to \sf Pos.\]</div>
+<p>This allows us to introduce new variations on the notions of this section.</p>
+<p>For example, above we showed that <em>an arrow <span class="math notranslate nohighlight">\(f:B\to A\)</span> is mono if <span class="math notranslate nohighlight">\(\mathcal C(X,f):\mathcal C(X,B)\to \mathcal (X,A)\)</span> is injective for all <span class="math notranslate nohighlight">\(X\in\mathcal C\)</span>.</em></p>
+<p>In <span class="math notranslate nohighlight">\(\sf Pos\)</span>, instead of saying injective, we can also say embedding (order-preserving and order-reflecting).</p>
+<p><strong>Exercise:</strong> What is the “diagrammatic” definition that characterizes, in a category <span class="math notranslate nohighlight">\(\mathcal C\)</span> with ordered homsets, arrows <span class="math notranslate nohighlight">\(f\)</span> with <span class="math notranslate nohighlight">\(\mathcal C(X,f):\mathcal C(X,B)\to \mathcal (X,A)\)</span> is an <em>embedding</em> for all <span class="math notranslate nohighlight">\(X\in\mathcal C\)</span>?</p>
+<p><strong>Exercise:</strong> What is the “diagrammatic” definition that characterizes, in a category <span class="math notranslate nohighlight">\(\mathcal C\)</span> with ordered homsets, the product <span class="math notranslate nohighlight">\(A\times B\)</span> now defined by asking the equation</p>
+<div class="math notranslate nohighlight">
+\[\mathcal C(C,A\times B)\cong \mathcal C(C,A)\times  \mathcal C(C,B)\]</div>
+<p>to be an isomorphism in the category of posets?</p>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="small" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
@@ -491,7 +506,7 @@ A\ ,B &amp; \mapsto \mathcal C(A,B)
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Topics in Category Theory</p>
+        <p class="prev-next-title">Introduction</p>
       </div>
     </a>
     <a class="right-next"
@@ -525,6 +540,7 @@ A\ ,B &amp; \mapsto \mathcal C(A,B)
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limits">Limits</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colimits">Colimits</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">The Yoneda Embedding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#order-enriched-categories">Order-Enriched Categories</a></li>
 </ul>
   </nav></div>
 

@@ -24,7 +24,7 @@ An arrow $f:A\to B$ is epi if $\mathcal C(f,X):\mathcal C(B,X)\to \mathcal (A,X)
 
 **Categories:** $A\times B$ is the product of $A$ and $B$ iff
 
-$$ \mathcal C(C,A\times B)\cong \mathcal C(C,A)\times  \mathcal C(C,B)$$
+$$\mathcal C(C,A\times B)\cong \mathcal C(C,A)\times  \mathcal C(C,B)$$
 
 where the $\times$ on the left is what is defined and the $\times$ on the right is the ordinay cartesian product in Set.
 
@@ -86,3 +86,29 @@ The two Yoneda embeddings are obtained by fixing one of the coordinates
 **Exercise:** Show that the Yoneda embedding preserves limits, that is, if $C\cong\lim D$ then $\mathcal C(X,C)\cong\lim\mathcal C(X,D)$. [^functorCategory]
 
 [^functorCategory]: If $D:\mathcal I\to\mathcal C$ is a functor ($D$ for "diagram"), then $\mathcal C(X,D)$ is the induced  functor $\mathcal I\to \sf Set$.
+
+## Order-Enriched Categories
+
+Many categories have more structure than just being a category. For example, in a category of ordered structures one can define an order on morphisms pointwise. Then homsets are ordered sets, typically partial orders (posets). Given such a category $\mathcal C$, we have a functor 
+
+$$\mathcal C(-,-):\mathcal C^{op}\times\mathcal C\to \sf Pos.$$
+
+This allows us to introduce new variations on the notions of this section. 
+
+For example, above we showed that *an arrow $f:B\to A$ is mono if $\mathcal C(X,f):\mathcal C(X,B)\to \mathcal (X,A)$ is injective for all $X\in\mathcal C$.*
+
+In $\sf Pos$, instead of saying injective, we can also say embedding (order-preserving and order-reflecting).
+
+**Exercise:** What is the "diagrammatic" definition that characterizes, in a category $\mathcal C$ with ordered homsets, arrows $f$ with $\mathcal C(X,f):\mathcal C(X,B)\to \mathcal (X,A)$ is an *embedding* for all $X\in\mathcal C$?
+
+**Exercise:** What is the "diagrammatic" definition that characterizes, in a category $\mathcal C$ with ordered homsets, the product $A\times B$ now defined by asking the equation
+
+$$\mathcal C(C,A\times B)\cong \mathcal C(C,A)\times  \mathcal C(C,B)$$
+
+to be an isomorphism in the category of posets?
+
+
+
+
+
+
