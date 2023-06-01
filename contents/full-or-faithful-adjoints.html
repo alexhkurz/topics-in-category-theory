@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>This is Section 1 &#8212; Topics in Category Theory</title>
+    <title>Full or Faithful Adjoints &#8212; Topics in Category Theory</title>
   
   
   
@@ -36,6 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -62,9 +63,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/section1';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/full-or-faithful-adjoints';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Regular and Exact Categories" href="regular-and-exact-categories.html" />
+    <link rel="prev" title="Topics in Category Theory" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -149,7 +154,11 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 0</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Full or Faithful Adjoints</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="regular-and-exact-categories.html">Regular and Exact Categories</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lawveres-characterization-of-varieties.html">Lawvere’s Characterization of Varieties</a></li>
@@ -228,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/alexhkurz/topics-in-category-theory.git/issues/new?title=Issue%20on%20page%20%2Fcontents/section1.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexhkurz/topics-in-category-theory.git/issues/new?title=Issue%20on%20page%20%2Fcontents/full-or-faithful-adjoints.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -258,7 +267,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/contents/section1.md" target="_blank"
+      <li><a href="../_sources/contents/full-or-faithful-adjoints.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -327,7 +336,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -338,11 +349,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>This is Section 1</h1>
+    <h1>Full or Faithful Adjoints</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-proof">The proof</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -352,10 +371,62 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="this-is-section-1">
-<h1>This is Section 1<a class="headerlink" href="#this-is-section-1" title="Permalink to this heading">#</a></h1>
-<p><a class="reference external" href="https://www.lipsum.com/">Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit. In maximus nulla ut nibh pellentesque consectetur. Aenean feugiat mollis suscipit. Pellentesque id sem mi. Morbi vel quam sit amet massa varius hendrerit. Suspendisse porttitor, est id egestas pulvinar, nulla ex vehicula turpis, vitae egestas leo dui nec dolor. Cras quis dolor eget urna aliquam tempor id eget felis. Mauris semper laoreet diam eu imperdiet. Vestibulum vitae diam vitae sem fermentum fermentum.</p>
-<p>Aenean cursus vel turpis a laoreet. Cras vestibulum massa quis magna aliquet, sit amet fringilla ligula sodales. Pellentesque eu ex mi. Ut sed felis id neque finibus condimentum ac vel dui. Cras dapibus massa in facilisis finibus. Ut congue turpis libero, et ultrices magna dictum eget. Donec pulvinar est vehicula ante tincidunt, et tempor massa rhoncus. Sed eu placerat ante. Aenean vestibulum, mi et feugiat imperdiet, libero velit viverra neque, ac egestas sapien lectus sed justo. Vivamus consectetur elementum dolor euismod porta. Morbi mi elit, tincidunt vel nisl ut, tempus lacinia turpis. Proin blandit erat in ligula vulputate, at blandit velit maximus. Proin tincidunt dolor vitae blandit pretium. Ut sit amet vehicula risus. Vivamus ut pellentesque risus, id porttitor dui. In at dui vitae erat dignissim viverra vitae ut orci.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="full-or-faithful-adjoints">
+<h1>Full or Faithful Adjoints<a class="headerlink" href="#full-or-faithful-adjoints" title="Permalink to this heading">#</a></h1>
+<p>Let <span class="math notranslate nohighlight">\(F:X\to A\)</span>, <span class="math notranslate nohighlight">\(G:A\to X\)</span>, <span class="math notranslate nohighlight">\(F\dashv G\)</span>, <span class="math notranslate nohighlight">\(\eta_x:x\to GFx\)</span>, <span class="math notranslate nohighlight">\(\epsilon_a:FGa\to a\)</span>.</p>
+<p>![](https://hackmd.io/_uploads/Hk_kNrB83.png =600x)</p>
+<p>Mac Lane, page 88:</p>
+<p><img alt="" src="https://hackmd.io/_uploads/B1aZI1Sji.png" /></p>
+<p>This is proved using:</p>
+<p><img alt="" src="https://hackmd.io/_uploads/SJRXUJSos.png" /></p>
+<p>From the lemma we obtain the theorem</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>counit componentwise</p></th>
+<th class="head text-center"><p>right adjoint</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>epi</p></td>
+<td class="text-center"><p>faithful</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>split mono</p></td>
+<td class="text-center"><p>full</p></td>
+</tr>
+</tbody>
+</table>
+<p>and its dual</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>unit componentwise</p></th>
+<th class="head text-center"><p>left adjoint</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>mono</p></td>
+<td class="text-center"><p>faithful</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>split epi</p></td>
+<td class="text-center"><p>full</p></td>
+</tr>
+</tbody>
+</table>
+<p>as corollaries.</p>
+<section id="the-proof">
+<h2>The proof<a class="headerlink" href="#the-proof" title="Permalink to this heading">#</a></h2>
+<p>For variety, we prove the dual of lemma and theorem.</p>
+<p><strong>Lemma:</strong> Let <span class="math notranslate nohighlight">\(f^\ast:X(-,y) \to X(-,z)\)</span> given by Yoneda for <span class="math notranslate nohighlight">\(f:y\to z\)</span>. Then <span class="math notranslate nohighlight">\(f^\ast\)</span> is componentwise injective iff <span class="math notranslate nohighlight">\(f\)</span> is mono and <span class="math notranslate nohighlight">\(f^\ast\)</span> is componentwise onto iff <span class="math notranslate nohighlight">\(f\)</span> is split epi.</p>
+<p><em>Proof:</em> This is straightforward from the respective definitions.</p>
+<p>To prove the dual of the theorem, consider
+$<span class="math notranslate nohighlight">\(X(x,y)\stackrel {F_{x,y}} \longrightarrow 
+A(Fx,Fy) \stackrel \cong \longrightarrow 
+X(x,UFy)\)</span>$</p>
+<p>which is the transformation natural in <span class="math notranslate nohighlight">\(x\)</span> determined (via Yoneda) by the unit <span class="math notranslate nohighlight">\(\eta_y:y\to UFy\)</span>.</p>
+<p>The lemma tells us that the natural transformation (hence <span class="math notranslate nohighlight">\(F_{x,y}\)</span>) is componentwise injective iff <span class="math notranslate nohighlight">\(\eta_y\)</span> is mono and is componentwise surjective iff <span class="math notranslate nohighlight">\(\eta_y\)</span> is split epi.</p>
+<p>We have shown that <span class="math notranslate nohighlight">\(F\)</span> is faithful iff the unit is componentwise mono and full iff the unit is componentwise split epi.</p>
+<hr class="docutils" />
+<p><a class="reference external" href="https://q.uiver.app/#q=WzAsNixbMSwxLCJYIl0sWzMsMSwiQSJdLFswLDAsIngiXSxbMCwyLCJHRngiXSxbNCwwLCJGR2EiXSxbNCwyLCJhIl0sWzAsMSwiRiIsMCx7ImN1cnZlIjotMn1dLFsxLDAsIkciLDAseyJjdXJ2ZSI6LTJ9XSxbMCwxLCJcXGJvdCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDMsIlxcZXRhX3giLDFdLFs0LDUsIlxcdmFyZXBzaWxvbl9hIiwxXV0=">Diagrams</a></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -389,6 +460,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Topics in Category Theory</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="regular-and-exact-categories.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Regular and Exact Categories</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -398,6 +487,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-proof">The proof</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

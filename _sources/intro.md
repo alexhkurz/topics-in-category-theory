@@ -8,7 +8,7 @@
 
 These notes do not cover basic notions such as category, functor, natural transformations, Yoneda, epi, mono, factorization systems, limits (products, equalisers, pullbacks), colimits, adjunctions but I am happy to explain all of this in person.
 
-The general aim is to write these notes from the point of view of advanced category theory without assuming that reader has covered everything in basic category theory. Roughly speaking, in my view, basic category theory relies on diagram chasing while advanced category theory uses algebraic style of [reasoning with equations up to isomorphism](contents/category-theory-via-equations.md).
+The general aim is to write these notes from the point of view of advanced category theory without assuming that reader has covered everything in basic category theory. Roughly speaking, in my view, basic category theory relies on diagram chasing while advanced category theory uses algebraic style of [reasoning with equations up to isomorphism](contents/yoneda.md).
 
 The particular aim of Part1 is to explain the paper (cited by Tommaso Moraschini)
 
@@ -18,7 +18,7 @@ The particular aim of Part1 is to explain the paper (cited by Tommaso Moraschini
 
 Part 0: General Topics
 
-- [Yoneda Lemma](contents/category-theory-via-equations.md)
+- [Yoneda Embedding](contents/yoneda.md)
 - [Adjunctions and Monads in a 2-Category]
 - [Reflective Subcategories](https://hackmd.io/@alexhkurz/BkRKr1rss)
 - [Monads]

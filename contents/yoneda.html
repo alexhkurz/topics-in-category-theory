@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Regular and Exact Categories &#8212; Topics in Category Theory</title>
+    <title>The Yoneda Embedding &#8212; Topics in Category Theory</title>
   
   
   
@@ -65,11 +65,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/regular-and-exact-categories';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/yoneda';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Lawvere’s Characterization of Varieties" href="lawveres-characterization-of-varieties.html" />
-    <link rel="prev" title="Full or Faithful Adjoints" href="full-or-faithful-adjoints.html" />
+    <link rel="next" title="Full or Faithful Adjoints" href="full-or-faithful-adjoints.html" />
+    <link rel="prev" title="Topics in Category Theory" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -155,17 +155,14 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 0</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">The Yoneda Embedding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="full-or-faithful-adjoints.html">Full or Faithful Adjoints</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Regular and Exact Categories</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lawveres-characterization-of-varieties.html">Lawvere’s Characterization of Varieties</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="category-theory-via-equations.html">Category Theory via Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regular-and-exact-categories.html">Regular and Exact Categories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lawveres-characterization-of-varieties.html">Lawvere’s Characterization of Varieties</a></li>
 </ul>
 
     </div>
@@ -237,7 +234,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/alexhkurz/topics-in-category-theory.git/issues/new?title=Issue%20on%20page%20%2Fcontents/regular-and-exact-categories.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexhkurz/topics-in-category-theory.git/issues/new?title=Issue%20on%20page%20%2Fcontents/yoneda.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -267,7 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/contents/regular-and-exact-categories.md" target="_blank"
+      <li><a href="../_sources/contents/yoneda.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -349,7 +346,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Regular and Exact Categories</h1>
+    <h1>The Yoneda Embedding</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -359,11 +356,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relations">Relations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exact-categories">Exact Categories</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#warm-up">Warm-up</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limits">Limits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colimits">Colimits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">The Yoneda Embedding</a></li>
 </ul>
             </nav>
         </div>
@@ -375,106 +371,85 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="regular-and-exact-categories">
-<h1>Regular and Exact Categories<a class="headerlink" href="#regular-and-exact-categories" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="the-yoneda-embedding">
+<h1>The Yoneda Embedding<a class="headerlink" href="#the-yoneda-embedding" title="Permalink to this heading">#</a></h1>
 <p>(under construction)</p>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
-<p>Regular categories</p>
-<ul class="simple">
-<li><p>are a generalisation of abelian categories and ordinary categories of algebras;</p></li>
-<li><p>have a good notion of image factorisation;</p></li>
-<li><p>gives rise to a categories of relations. <a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
-</ul>
-<p>For a rough comparison, we can look at</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-center"><p>general categories</p></th>
-<th class="head text-center"><p>categories with free algebras</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-center"><p>regular</p></td>
-<td class="text-center"><p>quasi-variety</p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p>exact</p></td>
-<td class="text-center"><p>variety</p></td>
-</tr>
-</tbody>
-</table>
+<p>I leave it as an exercise to show that the following implicit definitions are equivalent to the familiar ones.</p>
+<p>It is instructive to develop this in parallel for categories and for posets.</p>
+<p>Let <span class="math notranslate nohighlight">\(\mathcal C\)</span> be a category and let <span class="math notranslate nohighlight">\(X\)</span> be a poset.</p>
+<p><span class="math notranslate nohighlight">\(X(x,y)=1\)</span> means <span class="math notranslate nohighlight">\(x\le y\)</span> and <span class="math notranslate nohighlight">\(X(x,y)=0\)</span> means <span class="math notranslate nohighlight">\(x\not\le y\)</span>. The function <span class="math notranslate nohighlight">\(X(x,y)\)</span> is order-reversing in <span class="math notranslate nohighlight">\(x\)</span> and order-preserving in <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\mathcal C(A,B)\)</span> is the set of arrows <span class="math notranslate nohighlight">\(A\to B\)</span>. The functor <span class="math notranslate nohighlight">\(\mathcal C(A,B)\)</span> is contravariant in <span class="math notranslate nohighlight">\(A\)</span> and covariant in <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p>Note that <span class="math notranslate nohighlight">\(\mathcal C^{op}(A,B)=\mathcal C(B,A)\)</span>.</p>
+<section id="warm-up">
+<h2>Warm-up<a class="headerlink" href="#warm-up" title="Permalink to this heading">#</a></h2>
+<p>An arrow <span class="math notranslate nohighlight">\(f:B\to A\)</span> is mono if <span class="math notranslate nohighlight">\(\mathcal C(X,f):\mathcal C(X,B)\to \mathcal (X,A)\)</span> is injective for all <span class="math notranslate nohighlight">\(X\in\mathcal C\)</span>.</p>
+<p>An arrow <span class="math notranslate nohighlight">\(f:A\to B\)</span> is epi if <span class="math notranslate nohighlight">\(\mathcal C(f,X):\mathcal C(B,X)\to \mathcal (A,X)\)</span> is injective for all <span class="math notranslate nohighlight">\(X\in\mathcal C\)</span>.</p>
 </section>
-<section id="definitions">
-<h2>Definitions<a class="headerlink" href="#definitions" title="Permalink to this heading">#</a></h2>
-<p>An arrow that arises as a coequalizer is called  a <strong>regular epi</strong>.</p>
-<p><strong>Definition:</strong> A <strong>regular category</strong> has finite limits and coequalizers and regular epis are stable under pullbacks.</p>
-<p><strong>Examples:</strong></p>
-<ul class="simple">
-<li><p>Varities and quasi-varities in the sense of universal algebra are regular categories.</p></li>
-<li><p>The category of posets (and many other categories of topological spaces) are not regular because regular epis are not stable under pullbacks.</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(\mathcal B\)</span> is regular than the category of functors <span class="math notranslate nohighlight">\([\mathcal A,\mathcal B]\)</span> is regular. In particular, presheaf categories are regular.</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(\mathcal A\)</span> is regular than the slice category <span class="math notranslate nohighlight">\(\mathcal A/A\)</span> is regular.</p></li>
-</ul>
-<p><strong>Exercises:</strong></p>
-<ul class="simple">
-<li><p>Every regular epi is an epi.</p></li>
-<li><p>If a regular epimorphism has a kernel pair, it is the coequalizer of that kernel pair.</p></li>
-<li><p>If a kernel pair has a coequalizer, it is the kernel pair of that regular epimorphism.</p></li>
-<li><p>Find a pullback <span class="math notranslate nohighlight">\((p,q)\)</span> of <span class="math notranslate nohighlight">\((j,k)\)</span> in the category of posets where <span class="math notranslate nohighlight">\(k\)</span> is a regular epi but <span class="math notranslate nohighlight">\(p\)</span> is not.</p></li>
-</ul>
-<p><strong>Exercises</strong>:</p>
-<ul class="simple">
-<li><p>(Epis don’t need to be surjective.) In the category of monoids, the inclusion <span class="math notranslate nohighlight">\((\mathbb N,0,+)\to (\mathbb Z,0,+)\)</span> is epi but not regular epi.</p></li>
-<li><p>In a regular category, every morphism factors as a regular epi followed by a mono.<a class="footnote-reference brackets" href="#factorization" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></li>
-<li><p>In a regular category, the composition of regular epis is regular.<a class="footnote-reference brackets" href="#compregepi" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p></li>
-</ul>
-<p><strong>Remark:</strong> There are various other strengthenings of the notion of epi (which we will not need in the following), such as extremal epis and strong epis. In regular categories, strong epis and regular epis coincide. This is a step we will skip, but is useful to know, because strong epis are closed under composition but regular epis in general are not.</p>
-<p>Let us recall from the exercises:</p>
-<p><strong>Fact:</strong> In a regular category every arrow can be factored into a regular epi followed by a mono.</p>
-</section>
-<section id="relations">
-<h2>Relations<a class="headerlink" href="#relations" title="Permalink to this heading">#</a></h2>
-<p>In any category <span class="math notranslate nohighlight">\(\mathcal C\)</span>, one can define a relation <span class="math notranslate nohighlight">\(R:A\to B\)</span> as a monomorphic span. If <span class="math notranslate nohighlight">\(\mathcal C\)</span> is regular, then one defines composition of relation via pullback and image factorisation. Moreover, due to regular epis being stable under pullbacks, the composition of relations is associative.</p>
-<p>To summarize, for every regular category <span class="math notranslate nohighlight">\(\mathcal C\)</span> there is the category of relations</p>
+<section id="limits">
+<h2>Limits<a class="headerlink" href="#limits" title="Permalink to this heading">#</a></h2>
+<p><strong>Categories:</strong> <span class="math notranslate nohighlight">\(A\times B\)</span> is the product of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> iff</p>
 <div class="math notranslate nohighlight">
-\[\sf Rel\mathcal C.\]</div>
-<p><strong>Exercise:</strong> Define reflexive, symmetric, and transitive relations in <span class="math notranslate nohighlight">\(\mathcal C\)</span>.</p>
-<p><strong>Theorem:</strong> The Yoneda embedding <span class="math notranslate nohighlight">\(\mathcal C\to [\mathcal C^{op},Set]\)</span> … …</p>
+\[ \mathcal C(C,A\times B)\cong \mathcal C(C,A)\times  \mathcal C(C,B)\]</div>
+<p>where the <span class="math notranslate nohighlight">\(\times\)</span> on the left is what is defined and the <span class="math notranslate nohighlight">\(\times\)</span> on the right is the ordinay cartesian product in Set.</p>
+<p><em>Exercise:</em> Generalize this to other limits.</p>
+<p><strong>Orders:</strong> <span class="math notranslate nohighlight">\(x\wedge y\)</span> is the meet of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> iff</p>
+<div class="math notranslate nohighlight">
+\[X(z,x\wedge y) = X(z,x)\wedge X(z,y)\]</div>
+<p>where the <span class="math notranslate nohighlight">\(\wedge\)</span> on the left is the meet in <span class="math notranslate nohighlight">\(X\)</span> defined by the equation and the <span class="math notranslate nohighlight">\(\wedge\)</span> on the right is the “and” in the 2-element Boolean algebra.</p>
 </section>
-<section id="exact-categories">
-<h2>Exact Categories<a class="headerlink" href="#exact-categories" title="Permalink to this heading">#</a></h2>
-<p>Early category was mostly category theory enriched over abelian groups (additive categories) and much of the category theory we know today was developed as a generalisation of the additive case. This is explicit in the original paper on exact categories:</p>
-<p><img alt="" src="https://hackmd.io/_uploads/B1gY7pTH2.png" /></p>
-<p><strong>Definition:</strong> A regular category is <strong>exact</strong> if it has effective equivalence relations, that is, every equivalence relation is the kernel pair of its coequaliser. A functor is <em>exact</em> if it preserves finite limits and regular epis.</p>
-<p><strong>Example:</strong> We have already seen that quasi-varieties are regular. Quasi-varieties are typically not exact, but varieties are. In fact, it is not hard to see how effective equivalence relations corresponds to closure under homomorphic images.</p>
-<p><strong>Example:</strong> If <span class="math notranslate nohighlight">\(\mathcal C\)</span> is regular, then the Yoneda embedding <span class="math notranslate nohighlight">\(\mathcal C\to [\mathcal C^{op},Set]\)</span> is exact.</p>
-<p>This means that one can transfer the usual set-theoretic proofs of properties of relations to all regular categories.</p>
+<section id="colimits">
+<h2>Colimits<a class="headerlink" href="#colimits" title="Permalink to this heading">#</a></h2>
+<p><strong>Categories:</strong> <span class="math notranslate nohighlight">\(A + B\)</span> is the product of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> iff</p>
+<div class="math notranslate nohighlight">
+\[ \mathcal C(A + B, C)\cong \mathcal C(A,C)\times  \mathcal C(B,C).\]</div>
+<p><em>Exercise:</em> Generalize this to other colimits.</p>
+<p><strong>Orders:</strong> <span class="math notranslate nohighlight">\(x\vee y\)</span> is the join of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> iff</p>
+<div class="math notranslate nohighlight">
+\[X(x\vee y,z) = X(x,z)\wedge X(y,z).\]</div>
 </section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<p>For a textbook account on regular and exact categories see</p>
+<section id="id1">
+<h2>The Yoneda Embedding<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>We have seen that various category theoretic notions can be defined both explicitely via universal properties and implicitely via equations up to isomorphism.</p>
+<p>There is a general explanation for this, that is based on the following results.</p>
 <ul class="simple">
-<li><p>Borceux, Handbook of Categorical Algebra, Volume 2, 1994.</p></li>
+<li><p>Limits in functor categories are computed pointwise.</p></li>
+<li><p>The Yoneda embedding preserves limits.</p></li>
+<li><p>The Yoneda embedding is fully faithful.</p></li>
 </ul>
-<p>I also recommend the section on metatheorems in the introduction of</p>
+<p>For every small<a class="footnote-reference brackets" href="#small" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> category <span class="math notranslate nohighlight">\(\mathcal C\)</span> there is a functor</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3a4377a6-3b5d-4c49-ba5d-44469f9d3e0a">
+<span class="eqno">(1)<a class="headerlink" href="#equation-3a4377a6-3b5d-4c49-ba5d-44469f9d3e0a" title="Permalink to this equation">#</a></span>\[\begin{align}
+\mathcal C^{op}\times \mathcal C  &amp; \to \sf Set\\
+A\ ,B &amp; \mapsto \mathcal C(A,B)
+\end{align}\]</div>
+<p>The two Yoneda embeddings are obtained by fixing one of the coordinates</p>
+<div class="amsmath math notranslate nohighlight" id="equation-bfcb0eb8-9c10-4f15-abf2-6ce1f411e858">
+<span class="eqno">(2)<a class="headerlink" href="#equation-bfcb0eb8-9c10-4f15-abf2-6ce1f411e858" title="Permalink to this equation">#</a></span>\[\begin{align}
+\mathcal C(-,A) : \mathcal C^{op}  &amp; \to \sf Set\\
+\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-83a3f08f-aea3-4840-b055-4dac9f4c2e13">
+<span class="eqno">(3)<a class="headerlink" href="#equation-83a3f08f-aea3-4840-b055-4dac9f4c2e13" title="Permalink to this equation">#</a></span>\[\begin{align}
+\mathcal C(A,-) : \mathcal C  &amp; \to \sf Set\\
+\end{align}\]</div>
 <ul class="simple">
-<li><p>Borceux, Bourn, <em>Mal’cev, protomodular, homological and semi-abelian categories</em>, 2004.</p></li>
+<li><p>In the case of monos, we use that <span class="math notranslate nohighlight">\(m\)</span> is mono if <span class="math notranslate nohighlight">\((1,1)\)</span> is a pullback of <span class="math notranslate nohighlight">\((m,m)\)</span>. We can now prove the “Warm-up” as follows.</p>
+<ul>
+<li><p>If <span class="math notranslate nohighlight">\(m\)</span> is mono, then <span class="math notranslate nohighlight">\((1,1)\)</span> is a pullback of <span class="math notranslate nohighlight">\((m,m)\)</span>. Since the Yoneda embedding preserves limits, we have that  <span class="math notranslate nohighlight">\((\mathcal C(-,1),\mathcal C(-,1))\)</span> is a pullback of <span class="math notranslate nohighlight">\(\mathcal C(-,m),\mathcal C(-,m)\)</span>. Since limits in functor categories are computed pointwise, <span class="math notranslate nohighlight">\((\mathcal C(X,1),\mathcal C(X,1))\)</span> is a pullback of <span class="math notranslate nohighlight">\(\mathcal C(X,m),\mathcal C(X,m)\)</span> for all <span class="math notranslate nohighlight">\(X\in\mathcal C\)</span>. Note that <span class="math notranslate nohighlight">\(\mathcal C(X,1)\)</span> is the identity on <span class="math notranslate nohighlight">\(X\)</span>. Hence <span class="math notranslate nohighlight">\(\mathcal C(X,m)\)</span> is mono for all <span class="math notranslate nohighlight">\(X\)</span>. Because monos in <span class="math notranslate nohighlight">\(\sf Set\)</span> are injective, we proved that \mathcal C(X,m)<span class="math notranslate nohighlight">\( is injective for all \)</span>X$.</p></li>
+<li><p>Conversely, <span class="math notranslate nohighlight">\(m\)</span> is mono if <span class="math notranslate nohighlight">\((1,1)\)</span> is a pullback of <span class="math notranslate nohighlight">\((m,m)\)</span>. Because the Yoneda embedding is fully faithful, this follows if <span class="math notranslate nohighlight">\((\mathcal C(X,1),\mathcal C(X,1))\)</span> is a pullback of <span class="math notranslate nohighlight">\(\mathcal C(X,m),\mathcal C(X,m)\)</span> for all <span class="math notranslate nohighlight">\(X\in\mathcal C\)</span>. But the latter, as we have seen in the previous item, is just another way to say that <span class="math notranslate nohighlight">\(\mathcal C(X,m)\)</span> is injective for all <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
 </ul>
-<p>nLab has all definitions I skipped and also valuable further information.</p>
-<ul class="simple">
-<li><p>https://ncatlab.org/nlab/show/regular+category</p></li>
+</li>
+<li><p>The case of epis is the dual, using that an epi in <span class="math notranslate nohighlight">\(\mathcal C\)</span> is a mono in <span class="math notranslate nohighlight">\(\mathcal C^{op}\)</span>.</p></li>
+<li><p>The case of products (or limits) uses the same steps of reasoning as the case of monos. The case of coproducts (or colimits) is dual again.</p></li>
 </ul>
+<p><strong>Exercise:</strong> Show that the Yoneda embedding preserves limits, that is, if <span class="math notranslate nohighlight">\(C\cong\lim D\)</span> then <span class="math notranslate nohighlight">\(\mathcal C(X,C)\cong\lim\mathcal C(X,D)\)</span>. <a class="footnote-reference brackets" href="#functorcategory" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
 <hr class="footnotes docutils" />
-<aside class="footnote brackets" id="id4" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>Why is it that the notion of a category is general enough to accommodate relations as arrows but then every introduction to category theory quickly abandons the example of relations and focusses on examples in which arrows are functions? One reason is that categories of relations are typically not closed under limits and colimits. A move that often works is the following. Regular categories are very common and they give rise to categories of relations with good properties, which are often best studied as so-called double categories in which “relational” arrows and “functional” arrows exist together.</p>
+<aside class="footnote brackets" id="small" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>Small here means that the collection <span class="math notranslate nohighlight">\(\mathcal C_0\)</span> of objects of <span class="math notranslate nohighlight">\(\mathcal C\)</span> is an object in <span class="math notranslate nohighlight">\(\sf Set\)</span>. Many categories do have a “proper class” of objects. In that case, one can use a category <span class="math notranslate nohighlight">\(\sf Set\)</span> that has so-called Grothendieck universes (or an inaccessible cardinal).</p>
 </aside>
-<aside class="footnote brackets" id="factorization" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
-<p>To factorize <span class="math notranslate nohighlight">\(f\)</span>, we observe that the coequalizer <span class="math notranslate nohighlight">\(e\)</span> of the kernel pair of <span class="math notranslate nohighlight">\(f\)</span> is a regular epi. The universal property of a coequalizer allows us to factor <span class="math notranslate nohighlight">\(f=m\circ e\)</span>. We want to show that <span class="math notranslate nohighlight">\(m\)</span> is mono. This needs two lemmas. First, that an arrow is mono iff the two legs of its kernel pair are equal. Second, that “pulling <span class="math notranslate nohighlight">\(e\)</span> back along the kernel pairs of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(m\)</span>” (it needs to be made precise what that means) results in an epi.</p>
-</aside>
-<aside class="footnote brackets" id="compregepi" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
-<p>This needs some work. One can show that, in a regular category, regular epis and strong epis coincide and then use that strong epis are closed under composition.</p>
+<aside class="footnote brackets" id="functorcategory" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>If <span class="math notranslate nohighlight">\(D:\mathcal I\to\mathcal C\)</span> is a functor (<span class="math notranslate nohighlight">\(D\)</span> for “diagram”), then <span class="math notranslate nohighlight">\(\mathcal C(X,D)\)</span> is the induced  functor <span class="math notranslate nohighlight">\(\mathcal I\to \sf Set\)</span>.</p>
 </aside>
 </section>
 </section>
@@ -511,20 +486,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="full-or-faithful-adjoints.html"
+       href="../intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Full or Faithful Adjoints</p>
+        <p class="prev-next-title">Topics in Category Theory</p>
       </div>
     </a>
     <a class="right-next"
-       href="lawveres-characterization-of-varieties.html"
+       href="full-or-faithful-adjoints.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lawvere’s Characterization of Varieties</p>
+        <p class="prev-next-title">Full or Faithful Adjoints</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -546,11 +521,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relations">Relations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exact-categories">Exact Categories</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#warm-up">Warm-up</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limits">Limits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colimits">Colimits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">The Yoneda Embedding</a></li>
 </ul>
   </nav></div>
 
