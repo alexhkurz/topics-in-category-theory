@@ -2,7 +2,7 @@
 
 Let $F:X\to A$, $G:A\to X$, $F\dashv G$, $\eta_x:x\to GFx$, $\epsilon_a:FGa\to a$.
 
-![](https://hackmd.io/_uploads/Hk_kNrB83.png =600x)
+<img src="../img/adjunction-full-faithful.png" width="600">
 
 
 Mac Lane, page 88:
