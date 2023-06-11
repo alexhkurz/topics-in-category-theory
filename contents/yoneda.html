@@ -418,30 +418,30 @@ document.write(`
 <li><p>The Yoneda embedding is fully faithful.</p></li>
 </ul>
 <p>For every small<a class="footnote-reference brackets" href="#small" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> category <span class="math notranslate nohighlight">\(\mathcal C\)</span> there is a functor</p>
-<div class="amsmath math notranslate nohighlight" id="equation-960c3bac-2881-4a40-883c-2d5f73078db1">
-<span class="eqno">(1)<a class="headerlink" href="#equation-960c3bac-2881-4a40-883c-2d5f73078db1" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a091ffbe-9ea5-47cb-9035-5d14a9326439">
+<span class="eqno">(1)<a class="headerlink" href="#equation-a091ffbe-9ea5-47cb-9035-5d14a9326439" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal C^{op}\times \mathcal C  &amp; \to \sf Set\\
 A\ ,B &amp; \mapsto \mathcal C(A,B)
 \end{align}\]</div>
 <p>The two Yoneda embeddings are obtained by fixing one of the coordinates</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ae25383c-e3d6-42fa-a753-e6014984b727">
-<span class="eqno">(2)<a class="headerlink" href="#equation-ae25383c-e3d6-42fa-a753-e6014984b727" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-31b58ebc-186d-4467-a285-40d4e4b5b694">
+<span class="eqno">(2)<a class="headerlink" href="#equation-31b58ebc-186d-4467-a285-40d4e4b5b694" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal C(-,A) : \mathcal C^{op}  &amp; \to \sf Set\\
 \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-4e5885a1-7517-4610-8257-beeecc67c27b">
-<span class="eqno">(3)<a class="headerlink" href="#equation-4e5885a1-7517-4610-8257-beeecc67c27b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6fe0f04f-74bf-42d9-b54a-ba2065167ddd">
+<span class="eqno">(3)<a class="headerlink" href="#equation-6fe0f04f-74bf-42d9-b54a-ba2065167ddd" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal C(A,-) : \mathcal C  &amp; \to \sf Set\\
 \end{align}\]</div>
 <ul class="simple">
-<li><p>In the case of monos, we use that <span class="math notranslate nohighlight">\(m\)</span> is mono if <span class="math notranslate nohighlight">\((1,1)\)</span> is a pullback of <span class="math notranslate nohighlight">\((m,m)\)</span>. We can now prove the “Warm-up” as follows.</p>
+<li><p>In the case of monos, we use that <span class="math notranslate nohighlight">\(m\)</span> is mono if and only if <span class="math notranslate nohighlight">\((1,1)\)</span> is a pullback of <span class="math notranslate nohighlight">\((m,m)\)</span>. We can now prove the “Warm-up” as follows.</p>
 <ul>
-<li><p>If <span class="math notranslate nohighlight">\(m\)</span> is mono, then <span class="math notranslate nohighlight">\((1,1)\)</span> is a pullback of <span class="math notranslate nohighlight">\((m,m)\)</span>. Since the Yoneda embedding preserves limits, we have that  <span class="math notranslate nohighlight">\((\mathcal C(-,1),\mathcal C(-,1))\)</span> is a pullback of <span class="math notranslate nohighlight">\(\mathcal C(-,m),\mathcal C(-,m)\)</span>. Since limits in functor categories are computed pointwise, <span class="math notranslate nohighlight">\((\mathcal C(X,1),\mathcal C(X,1))\)</span> is a pullback of <span class="math notranslate nohighlight">\(\mathcal C(X,m),\mathcal C(X,m)\)</span> for all <span class="math notranslate nohighlight">\(X\in\mathcal C\)</span>. Note that <span class="math notranslate nohighlight">\(\mathcal C(X,1)\)</span> is the identity on <span class="math notranslate nohighlight">\(X\)</span>. Hence <span class="math notranslate nohighlight">\(\mathcal C(X,m)\)</span> is mono for all <span class="math notranslate nohighlight">\(X\)</span>. Because monos in <span class="math notranslate nohighlight">\(\sf Set\)</span> are injective, we proved that \mathcal C(X,m)<span class="math notranslate nohighlight">\( is injective for all \)</span>X$.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(m\)</span> is mono, then <span class="math notranslate nohighlight">\((1,1)\)</span> is a pullback of <span class="math notranslate nohighlight">\((m,m)\)</span>. Since the Yoneda embedding preserves limits, we have that  <span class="math notranslate nohighlight">\((\mathcal C(-,1),\mathcal C(-,1))\)</span> is a pullback of <span class="math notranslate nohighlight">\((\mathcal C(-,m),\mathcal C(-,m))\)</span>. Since limits in functor categories are computed pointwise, <span class="math notranslate nohighlight">\((\mathcal C(X,1),\mathcal C(X,1))\)</span> is a pullback of <span class="math notranslate nohighlight">\(\mathcal C(X,m),\mathcal C(X,m)\)</span> for all <span class="math notranslate nohighlight">\(X\in\mathcal C\)</span>. Note that <span class="math notranslate nohighlight">\(\mathcal C(X,1)\)</span> is the identity. Hence <span class="math notranslate nohighlight">\(\mathcal C(X,m)\)</span> is mono for all <span class="math notranslate nohighlight">\(X\)</span>. Because monos in <span class="math notranslate nohighlight">\(\sf Set\)</span> are injective, we proved that <span class="math notranslate nohighlight">\(\mathcal C(X,m)\)</span> is injective for all <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
 <li><p>Conversely, <span class="math notranslate nohighlight">\(m\)</span> is mono if <span class="math notranslate nohighlight">\((1,1)\)</span> is a pullback of <span class="math notranslate nohighlight">\((m,m)\)</span>. Because the Yoneda embedding is fully faithful, this follows if <span class="math notranslate nohighlight">\((\mathcal C(X,1),\mathcal C(X,1))\)</span> is a pullback of <span class="math notranslate nohighlight">\(\mathcal C(X,m),\mathcal C(X,m)\)</span> for all <span class="math notranslate nohighlight">\(X\in\mathcal C\)</span>. But the latter, as we have seen in the previous item, is just another way to say that <span class="math notranslate nohighlight">\(\mathcal C(X,m)\)</span> is injective for all <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
 </ul>
 </li>
 <li><p>The case of epis is the dual, using that an epi in <span class="math notranslate nohighlight">\(\mathcal C\)</span> is a mono in <span class="math notranslate nohighlight">\(\mathcal C^{op}\)</span>.</p></li>
-<li><p>The case of products (or limits) uses the same steps of reasoning as the case of monos. The case of coproducts (or colimits) is dual again.</p></li>
 </ul>
+<p><strong>Exercise:</strong> How does applying this methodology plays out in the case of products (or limits)?</p>
 <p><strong>Exercise:</strong> Show that the Yoneda embedding preserves limits, that is, if <span class="math notranslate nohighlight">\(C\cong\lim D\)</span> then <span class="math notranslate nohighlight">\(\mathcal C(X,C)\cong\lim\mathcal C(X,D)\)</span>. <a class="footnote-reference brackets" href="#functorcategory" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
 </section>
 <section id="order-enriched-categories">

@@ -149,7 +149,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Topics in Category Theory
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -389,12 +389,15 @@ document.write(`
 <p>The discussion suggests that it will be important to find a replacement of free algebras that can be defined without access to the forgetful functor. These objects are the so-called <strong>projective generators</strong>. We will see that every projective generator <span class="math notranslate nohighlight">\(G\)</span> turns an abstract variety <span class="math notranslate nohighlight">\(\mathcal A\)</span> into a concrete one by inducing a forgetful functor <span class="math notranslate nohighlight">\(\mathcal A(G,-)\)</span>.</p>
 <p>Note that by declaring <span class="math notranslate nohighlight">\(\mathcal A(G,-)\)</span> to be a forgetful functor, <span class="math notranslate nohighlight">\(G\)</span> becomes the free algebra over one generator. Every abstract variety corresponds to a whole class of different concrete varieties.</p>
 <p>In the following we will define projective generators and state Lawvere’s theorem as well as its generalization to quasi-varieties.</p>
-<p><strong>Preliminary Exercise:</strong> Starting from the usual diagrammatic definition of coproduct, prove that it is equivalent to the following implicit definition.</p>
+<p><strong>Preliminary Exercise:</strong> Starting from the usual diagrammatic definition of coproduct, prove that it is equivalent to the following implicit definition (see the section on the Yoneda embedding for more background).</p>
 <div class="math notranslate nohighlight">
-\[\mathcal C(A+B,C)\cong \mathcal C(A,B)\times \mathcal (A,C)\]</div>
+\[\mathcal C(A+B,C)\cong \mathcal C(A,B)\times \mathcal C(A,C)\]</div>
 <p>Conclude that</p>
 <div class="math notranslate nohighlight">
-\[\mathcal C(A+A,C)\cong Set(2,\mathcal (A,C)).\]</div>
+\[\mathcal C(A+A,C)\cong Set(2,\mathcal C(A,C)).\]</div>
+<p>More generally, we will write <span class="math notranslate nohighlight">\(X\bullet A\)</span> for the <span class="math notranslate nohighlight">\(n\)</span>-fold coproduct of <span class="math notranslate nohighlight">\(A\)</span>. It is called the tensor or copower and defined by an equation similarly to the one above, replacing <span class="math notranslate nohighlight">\(2\)</span> by <span class="math notranslate nohighlight">\(X\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-copower">
+<span class="eqno">(4)<a class="headerlink" href="#equation-copower" title="Permalink to this equation">#</a></span>\[\mathcal C(X\bullet A,C)\cong Set(X,\mathcal C(A,C)).\]</div>
 </section>
 <section id="projective-objects">
 <h2>Projective Objects<a class="headerlink" href="#projective-objects" title="Permalink to this heading">#</a></h2>
@@ -405,17 +408,16 @@ document.write(`
 <p>The following observation is pivotal.</p>
 <p><strong>Exercise:</strong> Free objects in a (quasi)variety are projective. <a class="footnote-reference brackets" href="#freeisprojective" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <p>Much of what is interesting in the following rests on the fact that while all free objects are projective the converse is not true. But, as alluded to in the introduction, for every projective object there is a forgetful functor that makes it free (even free over one generator).</p>
-<p><strong>Exercise:</strong> In the category of Boolean algebras, every algebra apart from the trivial (=one element) one is projective.</p>
+<p><strong>Exercise:</strong> In the category of Boolean algebras, every finite algebra apart from the trivial (=one element) one is projective.</p>
 <p>The previous exercise leads to a more general result:</p>
 <p><strong>Exercise:</strong> The retract of a free (or just a projective) algebra is projective.</p>
 <p>To complete the picture:</p>
 <p><strong>Exercise:</strong> In a (quasi)variety, the projectives are precisely the retracts of the free algebras.</p>
-<p><strong>Question:</strong> Which varieties arise from declaring any non-trivial finite Boolean algebra as free over one generator?</p>
 </section>
 <section id="generators">
 <h2>Generators<a class="headerlink" href="#generators" title="Permalink to this heading">#</a></h2>
 <p>So far, we found an abstract replacement for free algebras, namely projective objects.</p>
-<p>Before we can prove Lawvere’s theorem, we need to capture another property of free algebras:</p>
+<p>Before we can prove Lawvere’s theorem, we need to capture another property of free algebras in (quasi)varieties:</p>
 <p>In every (quasi)variety, every object <span class="math notranslate nohighlight">\(A\)</span> is the quotient of a free algebra. Using the adjunction <span class="math notranslate nohighlight">\(F\dashv U:\mathcal A\to Set\)</span> we can make this more precise. As all adjunctions, this adjunction provides us with a “counit”</p>
 <div class="math notranslate nohighlight">
 \[\epsilon_A:FUA\to A.\]</div>
@@ -427,10 +429,11 @@ document.write(`
 \[FUA\cong F(UA\bullet 1) \cong UA\bullet F1\]</div>
 <p>because <span class="math notranslate nohighlight">\(\bullet\)</span> is a colimit <a class="footnote-reference brackets" href="#copower" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> and <span class="math notranslate nohighlight">\(F\)</span> (being a left adjoint) preserves colimits.</p>
 <p><strong>Definition:</strong> A regular category <span class="math notranslate nohighlight">\(\mathcal C\)</span> has <strong>generator</strong> <span class="math notranslate nohighlight">\(G\)</span> if for all objects <span class="math notranslate nohighlight">\(C\)</span> there is a set <span class="math notranslate nohighlight">\(X\)</span> and a regular epi <span class="math notranslate nohighlight">\(X\bullet G\to C\)</span>. If <span class="math notranslate nohighlight">\(G\)</span> is also projective, it is called a <strong>projective generator</strong>.</p>
-<p><strong>Remark:</strong> We will use below that the definition of the copower <span class="math notranslate nohighlight">\(\bullet\)</span>, written as an implicit definition in the form of the equation</p>
+<p><strong>Remark:</strong> We will use below that the definition <a class="reference internal" href="#equation-copower">(4)</a> of the copower <span class="math notranslate nohighlight">\(\bullet\)</span>, written as an implicit definition in the form of the equation</p>
 <div class="math notranslate nohighlight">
 \[\mathcal C(X\bullet G,C)\cong Set(X,\mathcal C(G,C)),\]</div>
 <p>is exactly saying that <span class="math notranslate nohighlight">\(-\bullet G\)</span>  is left adjoint to <span class="math notranslate nohighlight">\(\mathcal C(G,-)\)</span>.</p>
+<p><strong>Question:</strong> Which varieties arise from declaring any non-trivial finite Boolean algebra as free over one generator? …</p>
 </section>
 <section id="lawvere-s-theorem">
 <h2>Lawvere’s Theorem<a class="headerlink" href="#lawvere-s-theorem" title="Permalink to this heading">#</a></h2>
@@ -467,7 +470,7 @@ document.write(`
 </ul>
 <p>These notes follow</p>
 <ul class="simple">
-<li><p>Kurz, Velebil, <span class="xref myst"></span>, …</p></li>
+<li><p>Kurz, Velebil, …</p></li>
 </ul>
 <p>which generalizes Lawvere’s theorems to the order-enriched setting. Interestingly, if formulated at the right level of abstraction, the ordinary and the order-enriched case have the same formulation and almost the same proof. The relevant theorems of the paper are Theorem 5.9 and Theorem 5.13.</p>
 <p>I also relied on the classic paper</p>
@@ -479,6 +482,10 @@ document.write(`
 <ul class="simple">
 <li><p>https://ncatlab.org/nlab/show/projective+object</p></li>
 </ul>
+<p><span id="id6">[]</span>
+<span id="id7">[]</span>
+<span id="id8">[]</span>
+<span id="id9">[]</span></p>
 </section>
 <section id="diagrams">
 <h2>Diagrams<a class="headerlink" href="#diagrams" title="Permalink to this heading">#</a></h2>
@@ -494,7 +501,7 @@ document.write(`
 </aside>
 <aside class="footnote brackets" id="copower" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
-<p>We don’t need a formal definition of copower because we can assume that we have coproducts and copowers are special coproducts in which all summands are the same. A stand-alone definition of copowers (which generalizes to enriched categories) can be found at <a class="reference external" href="https://ncatlab.org/nlab/show/copower">nLab#copower</a>.</p>
+<p>See <a class="reference internal" href="#equation-copower">(4)</a> and <a class="reference external" href="https://ncatlab.org/nlab/show/copower">nLab#copower</a>.</p>
 </aside>
 <aside class="footnote brackets" id="fdashvu" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>

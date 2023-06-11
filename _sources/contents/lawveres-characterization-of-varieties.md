@@ -22,13 +22,23 @@ Note that by declaring $\mathcal A(G,-)$ to be a forgetful functor, $G$ becomes 
 
 In the following we will define projective generators and state Lawvere's theorem as well as its generalization to quasi-varieties.
 
-**Preliminary Exercise:** Starting from the usual diagrammatic definition of coproduct, prove that it is equivalent to the following implicit definition.
+**Preliminary Exercise:** Starting from the usual diagrammatic definition of coproduct, prove that it is equivalent to the following implicit definition (see the section on the Yoneda embedding for more background).
 
-$$\mathcal C(A+B,C)\cong \mathcal C(A,B)\times \mathcal (A,C)$$
+$$\mathcal C(A+B,C)\cong \mathcal C(A,B)\times \mathcal C(A,C)$$
 
 Conclude that 
 
-$$\mathcal C(A+A,C)\cong Set(2,\mathcal (A,C)).$$
+$$\mathcal C(A+A,C)\cong Set(2,\mathcal C(A,C)).$$
+
+More generally, we will write $X\bullet A$ for the $n$-fold coproduct of $A$. It is called the tensor or copower and defined by an equation similarly to the one above, replacing $2$ by $X$:
+
+```{math}
+:label: copower
+\mathcal C(X\bullet A,C)\cong Set(X,\mathcal C(A,C)).
+```
+
+
+
 
 
 ## Projective Objects
@@ -49,7 +59,7 @@ The following observation is pivotal.
 
 Much of what is interesting in the following rests on the fact that while all free objects are projective the converse is not true. But, as alluded to in the introduction, for every projective object there is a forgetful functor that makes it free (even free over one generator).
 
-**Exercise:** In the category of Boolean algebras, every algebra apart from the trivial (=one element) one is projective.
+**Exercise:** In the category of Boolean algebras, every finite algebra apart from the trivial (=one element) one is projective.
 
 The previous exercise leads to a more general result:
 
@@ -59,13 +69,11 @@ To complete the picture:
 
 **Exercise:** In a (quasi)variety, the projectives are precisely the retracts of the free algebras.
 
-**Question:** Which varieties arise from declaring any non-trivial finite Boolean algebra as free over one generator? 
-
 ## Generators
 
 So far, we found an abstract replacement for free algebras, namely projective objects. 
 
-Before we can prove Lawvere's theorem, we need to capture another property of free algebras:
+Before we can prove Lawvere's theorem, we need to capture another property of free algebras in (quasi)varieties:
 
 In every (quasi)variety, every object $A$ is the quotient of a free algebra. Using the adjunction $F\dashv U:\mathcal A\to Set$ we can make this more precise. As all adjunctions, this adjunction provides us with a "counit" 
 
@@ -83,15 +91,18 @@ because $\bullet$ is a colimit [^copower] and $F$ (being a left adjoint) preserv
 
 [^counitCoequaliser]: See [nLab#split coequalizer#Examples](https://ncatlab.org/nlab/show/split+coequalizer#examples) for details.
 
-[^copower]: We don't need a formal definition of copower because we can assume that we have coproducts and copowers are special coproducts in which all summands are the same. A stand-alone definition of copowers (which generalizes to enriched categories) can be found at [nLab#copower](https://ncatlab.org/nlab/show/copower). 
+[^copower]: See {eq}`copower` and [nLab#copower](https://ncatlab.org/nlab/show/copower). 
 
 **Definition:** A regular category $\mathcal C$ has **generator** $G$ if for all objects $C$ there is a set $X$ and a regular epi $X\bullet G\to C$. If $G$ is also projective, it is called a **projective generator**.
 
-**Remark:** We will use below that the definition of the copower $\bullet$, written as an implicit definition in the form of the equation
+**Remark:** We will use below that the definition {eq}`copower` of the copower $\bullet$, written as an implicit definition in the form of the equation
 
 $$\mathcal C(X\bullet G,C)\cong Set(X,\mathcal C(G,C)),$$
 
 is exactly saying that $-\bullet G$  is left adjoint to $\mathcal C(G,-)$.
+
+**Question:** Which varieties arise from declaring any non-trivial finite Boolean algebra as free over one generator? ...
+
 
 ## Lawvere's Theorem
 
@@ -141,7 +152,7 @@ The classic text on universal algebra from a category theoretic point of view is
 
 These notes follow 
 
-- Kurz, Velebil, [](), ...
+- Kurz, Velebil, ...
 
 which generalizes Lawvere's theorems to the order-enriched setting. Interestingly, if formulated at the right level of abstraction, the ordinary and the order-enriched case have the same formulation and almost the same proof. The relevant theorems of the paper are Theorem 5.9 and Theorem 5.13.
 
@@ -154,6 +165,11 @@ which may still be the best resource on the topic.
 nLab:
 
 - https://ncatlab.org/nlab/show/projective+object
+
+{cite}`KV:quasivarieties`
+{cite}`BloomW:p-varieties`
+{cite}`BloomW:finitary-quasi-varities`
+{cite}`Bloom:varieties`
 
 ## Diagrams
 

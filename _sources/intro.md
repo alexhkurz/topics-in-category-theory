@@ -32,6 +32,7 @@ Part 1: Universal Algebra
 
 - [Regular and Exact Categories](contents/regular-and-exact-categories.md) 
 - [Lawvere's Characterization of Varieties](contents/lawveres-characterization-of-varieties.md)
+- [Clones, Monads, Lawvere Theories](contents/clones.md)
 - [Monads and the Lawvere-Linton Theorem]
 - [Lawvere Theories]
 - [Morita Equivalence of Varieties]
@@ -47,6 +48,8 @@ More Topics:
 - ... to be continued if of interest ...
 
 ## Further References
+
+```{bibliography}
 
 - H.-E. Porst. Generalized Morita Theories. Notices of the South African Mathematical Society, 32:4–16, 2001.
 - Porst, [Hu's Primal Algebra Theorem revisited](https://dml.cz/bitstream/handle/10338.dmlcz/119217/CommentatMathUnivCarolRetro_41-2000-4_19.pdf), Commentationes Mathematicae Universitatis Carolinae, Vol. 41 (2000), 

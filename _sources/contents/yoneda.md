@@ -75,11 +75,12 @@ The two Yoneda embeddings are obtained by fixing one of the coordinates
 \mathcal C(A,-) : \mathcal C  & \to \sf Set\\
 \end{align}
 
-- In the case of monos, we use that $m$ is mono if $(1,1)$ is a pullback of $(m,m)$. We can now prove the "Warm-up" as follows.
-    - If $m$ is mono, then $(1,1)$ is a pullback of $(m,m)$. Since the Yoneda embedding preserves limits, we have that  $(\mathcal C(-,1),\mathcal C(-,1))$ is a pullback of $\mathcal C(-,m),\mathcal C(-,m)$. Since limits in functor categories are computed pointwise, $(\mathcal C(X,1),\mathcal C(X,1))$ is a pullback of $\mathcal C(X,m),\mathcal C(X,m)$ for all $X\in\mathcal C$. Note that $\mathcal C(X,1)$ is the identity on $X$. Hence $\mathcal C(X,m)$ is mono for all $X$. Because monos in $\sf Set$ are injective, we proved that \mathcal C(X,m)$ is injective for all $X$.
+- In the case of monos, we use that $m$ is mono if and only if $(1,1)$ is a pullback of $(m,m)$. We can now prove the "Warm-up" as follows.
+    - If $m$ is mono, then $(1,1)$ is a pullback of $(m,m)$. Since the Yoneda embedding preserves limits, we have that  $(\mathcal C(-,1),\mathcal C(-,1))$ is a pullback of $(\mathcal C(-,m),\mathcal C(-,m))$. Since limits in functor categories are computed pointwise, $(\mathcal C(X,1),\mathcal C(X,1))$ is a pullback of $\mathcal C(X,m),\mathcal C(X,m)$ for all $X\in\mathcal C$. Note that $\mathcal C(X,1)$ is the identity. Hence $\mathcal C(X,m)$ is mono for all $X$. Because monos in $\sf Set$ are injective, we proved that $\mathcal C(X,m)$ is injective for all $X$.
     - Conversely, $m$ is mono if $(1,1)$ is a pullback of $(m,m)$. Because the Yoneda embedding is fully faithful, this follows if $(\mathcal C(X,1),\mathcal C(X,1))$ is a pullback of $\mathcal C(X,m),\mathcal C(X,m)$ for all $X\in\mathcal C$. But the latter, as we have seen in the previous item, is just another way to say that $\mathcal C(X,m)$ is injective for all $X$.
 - The case of epis is the dual, using that an epi in $\mathcal C$ is a mono in $\mathcal C^{op}$.
-- The case of products (or limits) uses the same steps of reasoning as the case of monos. The case of coproducts (or colimits) is dual again.
+
+**Exercise:** How does applying this methodology plays out in the case of products (or limits)?
 
 [^small]: Small here means that the collection $\mathcal C_0$ of objects of $\mathcal C$ is an object in $\sf Set$. Many categories do have a "proper class" of objects. In that case, one can use a category $\sf Set$ that has so-called Grothendieck universes (or an inaccessible cardinal).
 
