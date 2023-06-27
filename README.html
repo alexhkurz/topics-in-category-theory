@@ -7,8 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>README &#8212; Topics in Category Theory</title>
   
   
@@ -159,6 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="contents/regular-and-exact-categories.html">Regular and Exact Categories</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contents/lawveres-characterization-of-varieties.html">Lawvere’s Characterization of Varieties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contents/clones.html">Clones, Monads, Lawvere Theories</a></li>
 </ul>
 
     </div>
@@ -365,7 +365,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="readme">
+  <div class="tex2jax_ignore mathjax_ignore section" id="readme">
 <h1>README<a class="headerlink" href="#readme" title="Permalink to this heading">#</a></h1>
 <p>Created from <a class="reference external" href="https://github.com/alexhkurz/template-for-jupyter-book">this template</a>.</p>
 <p>To make the book locally and open it in my browser, I run (the <code class="docutils literal notranslate"><span class="pre">open</span></code> command may be specific to a mac)</p>
@@ -378,7 +378,7 @@ document.write(`
 </div>
 <p>This makes the <a class="reference external" href="https://alexhkurz.github.io/topics-in-category-theory">book available online</a>. It also keeps the source files in the <code class="docutils literal notranslate"><span class="pre">main</span></code>-branch separate from the files in <code class="docutils literal notranslate"><span class="pre">_build</span></code> in the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch (Github knows that it should use the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch to show the book as a webpage).</p>
 <p>If the table of contents in the left-hand pane behaves in a strange way, clean out <code class="docutils literal notranslate"><span class="pre">_build</span></code> by running <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">clean</span> <span class="pre">.</span></code></p>
-<section id="references">
+<div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://jupyterbook.org/en/stable/start/your-first-book.html">Create your first book</a>.</p></li>
@@ -386,8 +386,8 @@ document.write(`
 <li><p><a class="reference external" href="https://raw.githubusercontent.com/executablebooks/jupyter-book/master/.gitignore">.gitignore</a>.</p></li>
 <li><p><a class="reference external" href="https://jupyterbook.org/en/stable/start/publish.html">Publish your book online</a>.</p></li>
 </ul>
-</section>
-<section id="questions">
+</div>
+<div class="section" id="questions">
 <h2>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">#</a></h2>
 <p>Is it possible to combine jupyter-book with tikzcd? Or other packages to draw diagrams?</p>
 <p>https://github.com/kisonecat/tikzjax</p>
@@ -400,8 +400,8 @@ document.write(`
     \draw (0,0) circle (1in);
   \end{tikzpicture}
 </script>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

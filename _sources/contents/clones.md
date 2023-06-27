@@ -9,7 +9,7 @@ The definitions are available in many places, eg at the nLab:
 
 What I want to do here is to sketch why these notions are equivalent.
 
-We start from a category that has a forgetful ([faithful](https://ncatlab.org/nlab/show/faithful+functor)1) functor $U:\cal A\to\sf Set$ with a left-adjoint $F\dashv U$. This includes in particular the case where $\cal A$ is a [variety](https://ncatlab.org/nlab/show/variety+of+algebras#definitions) in the sense of universal algebra, that is, a class of algebras defined by (finitary) operations and equations. 
+We start from a category that has a forgetful ([faithful](https://ncatlab.org/nlab/show/faithful+functor)) functor $U:\cal A\to\sf Set$ with a left-adjoint $F\dashv U$. This includes in particular the case where $\cal A$ is a [variety](https://ncatlab.org/nlab/show/variety+of+algebras#definitions) in the sense of universal algebra, that is, a class of algebras defined by (finitary) operations and equations. 
 
 In this more general situation, can we say what a term is, only referring to data provided by $U:\cal A\to\sf Set$? How can we collect all terms in one mathematical structure? How can we axiomatize this structure so that the axioms pick out exactly the structures that arise from those $U:\cal A\to\sf Set$ where $\cal A$ is a variety?
 
@@ -31,15 +31,15 @@ We will see later more reasons why one may want to define the Lawvere theory as 
 
 In the following we sketch the constructions that allows us to go betweem the various axiomatization of algebra. Varieties and Lawvere theories are equivalent. Monads are more general. The monads that are equivalent to Lawvere theories are the finitary monads $\sf Set\to\sf Set$.
 
-### From Universal Algebras to Lawvere Theories and back
+### Universal Algebra and Lawvere Theories 
 
-Given a variety defined by operations and equations, let $\cal L(n,1)$ be the equivalence classes of $n$-ary terms.
+Given a variety defined by operations and equations, let $\mathcal L(n,1)$ be the equivalence classes of $n$-ary terms.
 
-Conversely, given a Lawvere theory, take all elements of $\cal L(n,1)$ as fundamental operations of arity $n$ and take all commuting triangles in $\cal L$ (with codomain $1$) as equations.
+Conversely, given a Lawvere theory, take all elements of $\mathcal L(n,1)$ as fundamental operations of arity $n$ and take all commuting triangles in $\cal L$ (with codomain $1$) as equations.
 
-### From Lawvere Theories to Monads and back
+### Lawvere Theories and Monads 
 
-Given a Lawvere theory $\cal L$, define $Mn=\cal L(n,1)$. To define $M$ on arrows we make use of the fact that a Lawvere theory comes with an identity-on-object product-preserving functor $\mathbb F^{op}\to\cal L$, where $\mathbb F$ is the category of finite cardinals with all functions.[^mathbbF] Finally, it remains to extend $M$ from finite sets to all sets, which can be done using standard techniques (such as the using the left-Kan extension along $\mathbb F\to\sf Set$).  
+Given a Lawvere theory $\cal L$, define $Mn=\mathcal L(n,1)$. To define $M$ on arrows we make use of the fact that a Lawvere theory comes with an identity-on-object product-preserving functor $\mathbb F^{op}\to\cal L$, where $\mathbb F$ is the category of finite cardinals with all functions.[^mathbbF] Finally, it remains to extend $M$ from finite sets to all sets, which can be done using standard techniques (such as the using the left-Kan extension along $\mathbb F\to\sf Set$).  
 
 
 [^mathbbF]: $\mathbb F$ is the free category with finite coproducts on one generator. Dually, $\mathbb F^{op}$ is the free category with finite products on one generator. For example, there are exactly $n$ arrows $n\to 1$ in $\mathbb F^{op}$ and they corresponed to the $n$ projections from the $n$th power. In detail, given a set $A$ and an element in $A^n$, that is, a function $n\to A$ as well as an arrow $1\to n$, precomposing $n\to A$ with $1\to n$ is projection on to the coordinate selected by $1\to n$.
@@ -47,7 +47,7 @@ Given a Lawvere theory $\cal L$, define $Mn=\cal L(n,1)$. To define $M$ on arrow
 
 Conversely, given a monad $M:\sf Set\to Set$, $\mathcal L(n,1)=Mn$ defines a Lawvere theory.
 
-### From Universal Algebra to Monads and back
+### Universal Algebra and Monads
 
 Given a variety $F\dashv U:\cal A\to\sf Set$, $M=UF$ defines a monad.
 

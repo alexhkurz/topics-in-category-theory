@@ -10,9 +10,7 @@ These notes do not cover basic notions such as category, functor, natural transf
 
 The general aim is to write these notes from the point of view of advanced category theory without assuming that reader has covered everything in basic category theory. Roughly speaking, in my view, basic category theory relies on diagram chasing while advanced category theory uses algebraic style of [reasoning with equations up to isomorphism](contents/yoneda.md).
 
-The particular aim of Part1 is to explain the paper (cited by Tommaso Moraschini)
-
-- H.-E. Porst. Equivalence for varieties in general and for BOOL in particular. Algebra Universalis, 43:157–186, 2000.
+The particular aim of Part 1 is to explain {cite}`McKenzie:equivalence-for-varieties` and {cite}`Porst:equivalence-of-varieties` cited by Tommaso Moraschini {cite}`Moraschini:adjunctions-between-quasi-varieties`.
 
 ## Current Plan of Content
 
@@ -33,23 +31,31 @@ Part 1: Universal Algebra
 - [Regular and Exact Categories](contents/regular-and-exact-categories.md) 
 - [Lawvere's Characterization of Varieties](contents/lawveres-characterization-of-varieties.md)
 - [Clones, Monads, Lawvere Theories](contents/clones.md)
-- [Monads and the Lawvere-Linton Theorem]
-- [Lawvere Theories]
+- [The Lawvere-Linton Theorem]
 - [Morita Equivalence of Varieties]
 
 Part 2: Density and Completions of Categories:
 
-- [Locally finitely presentable categories]
+- ... 
+- [Finite Limits and Filtered Colimits (Locally Finitely Presentable Categories)]
+- [Finite Products and Sifted Colimits]
+- ... 
 
 More Topics:
 
 - [HSP theorems]
 - [Distributive Laws]
-- ... to be continued if of interest ...
+- ... 
 
-## Further References
+## Bibliography
+
+(just started)
 
 ```{bibliography}
+```
+
+
+## Further References
 
 - H.-E. Porst. Generalized Morita Theories. Notices of the South African Mathematical Society, 32:4–16, 2001.
 - Porst, [Hu's Primal Algebra Theorem revisited](https://dml.cz/bitstream/handle/10338.dmlcz/119217/CommentatMathUnivCarolRetro_41-2000-4_19.pdf), Commentationes Mathematicae Universitatis Carolinae, Vol. 41 (2000), 

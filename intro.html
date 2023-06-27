@@ -7,8 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction &#8212; Topics in Category Theory</title>
   
   
@@ -151,12 +150,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 0</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="contents/yoneda.html">The Yoneda Embedding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contents/full-or-faithful-adjoints.html">Full or Faithful Adjoints</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Morita Equivalence</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="contents/regular-and-exact-categories.html">Regular and Exact Categories</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contents/lawveres-characterization-of-varieties.html">Lawvere’s Characterization of Varieties</a></li>
@@ -356,6 +355,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#current-plan-of-content">Current Plan of Content</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-references">Further References</a></li>
 </ul>
             </nav>
@@ -368,20 +368,17 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
 <p>(under construction)</p>
 <p>(Part of the Amsterdam-Chapman Logic Meeting, May/June 2023)</p>
-<section id="id1">
+<div class="section" id="id1">
 <h2>Introduction<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>These notes do not cover basic notions such as category, functor, natural transformations, Yoneda, epi, mono, factorization systems, limits (products, equalisers, pullbacks), colimits, adjunctions but I am happy to explain all of this in person.</p>
 <p>The general aim is to write these notes from the point of view of advanced category theory without assuming that reader has covered everything in basic category theory. Roughly speaking, in my view, basic category theory relies on diagram chasing while advanced category theory uses algebraic style of <a class="reference internal" href="contents/yoneda.html"><span class="doc std std-doc">reasoning with equations up to isomorphism</span></a>.</p>
-<p>The particular aim of Part1 is to explain the paper (cited by Tommaso Moraschini)</p>
-<ul class="simple">
-<li><p>H.-E. Porst. Equivalence for varieties in general and for BOOL in particular. Algebra Universalis, 43:157–186, 2000.</p></li>
-</ul>
-</section>
-<section id="current-plan-of-content">
+<p>The particular aim of Part 1 is to explain <span id="id2">[<a class="reference internal" href="#id7" title="Ralph McKenzie. An algebraic version of categorical equivalence for varieties and more general algebraic categories. Logic and Algebra, 1996.">McKenzie, 1996</a>]</span> and <span id="id3">[<a class="reference internal" href="#id12" title="H.E. Porst. Equivalence of varieties in general and of bool in particular. Algebra Universalis, 2000. URL: https://user.informatik.uni-bremen.de/porst/dvis/PorstEqV.pdf.">Porst, 2000</a>]</span> cited by Tommaso Moraschini <span id="id4">[<a class="reference internal" href="#id8" title="Tommaso Moraschini. A logical and algebraic characterization of adjunctions between generalized quasi-varieties. J. Symb. Log., 83(3):899–919, 2018. URL: https://arxiv.org/pdf/1908.00534.pdf.">Moraschini, 2018</a>]</span>.</p>
+</div>
+<div class="section" id="current-plan-of-content">
 <h2>Current Plan of Content<a class="headerlink" href="#current-plan-of-content" title="Permalink to this heading">#</a></h2>
 <p>Part 0: General Techniques</p>
 <p>The general techniques will come up in various situations. It makes some sense to put them at the beginning, but maybe this section should better be a collection of appendices.</p>
@@ -399,44 +396,65 @@ document.write(`
 <li><p><a class="reference internal" href="contents/regular-and-exact-categories.html"><span class="doc std std-doc">Regular and Exact Categories</span></a></p></li>
 <li><p><a class="reference internal" href="contents/lawveres-characterization-of-varieties.html"><span class="doc std std-doc">Lawvere’s Characterization of Varieties</span></a></p></li>
 <li><p><a class="reference internal" href="contents/clones.html"><span class="doc std std-doc">Clones, Monads, Lawvere Theories</span></a></p></li>
-<li><p>[Monads and the Lawvere-Linton Theorem]</p></li>
-<li><p>[Lawvere Theories]</p></li>
+<li><p>[The Lawvere-Linton Theorem]</p></li>
 <li><p>[Morita Equivalence of Varieties]</p></li>
 </ul>
 <p>Part 2: Density and Completions of Categories:</p>
 <ul class="simple">
-<li><p>[Locally finitely presentable categories]</p></li>
+<li><p>…</p></li>
+<li><p>[Finite Limits and Filtered Colimits (Locally Finitely Presentable Categories)]</p></li>
+<li><p>[Finite Products and Sifted Colimits]</p></li>
+<li><p>…</p></li>
 </ul>
 <p>More Topics:</p>
 <ul class="simple">
 <li><p>[HSP theorems]</p></li>
 <li><p>[Distributive Laws]</p></li>
-<li><p>… to be continued if of interest …</p></li>
+<li><p>…</p></li>
 </ul>
-</section>
-<section id="further-references">
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this heading">#</a></h2>
+<p>(just started)</p>
+<div class="docutils container" id="id5">
+<dl class="citation">
+<dt class="label" id="id18"><span class="brackets">Blo76</span></dt>
+<dd><p>Stephen L. Bloom. Varieties of ordered algebras. <em>J. Comput. Syst. Sci.</em>, 13(2):200–212, 1976. URL: <a class="reference external" href="https://doi.org/10.1016/S0022-0000(76)80030-X">https://doi.org/10.1016/S0022-0000(76)80030-X</a>.</p>
+</dd>
+<dt class="label" id="id16"><span class="brackets">BW83</span></dt>
+<dd><p>Stephen L. Bloom and Jesse B. Wright. P-varieties - a signature independent characterization of varieties of ordered algebras. <em>Journal of Pure and Applied Algebra</em>, 29(1):13–58, 1983. URL: <a class="reference external" href="https://doi.org/10.1016/0022-4049(83)90080-4">https://doi.org/10.1016/0022-4049(83)90080-4</a>.</p>
+</dd>
+<dt class="label" id="id314"><span class="brackets">KP93</span></dt>
+<dd><p>G. Kelly and J. Power. Adjunctions whose counits are coequalizers and presentations of enriched monads. <em>J.Pure Appl. Algebra</em>, 1993. URL: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/0022404993900928/pdf">https://www.sciencedirect.com/science/article/pii/0022404993900928/pdf</a>.</p>
+</dd>
+<dt class="label" id="id19"><span class="brackets">KV17</span></dt>
+<dd><p>Alexander Kurz and J. Velebil. Quasivarieties and varieties of ordered algebras: regularity and exactness. <em>Math. Struct. Comput. Sci.</em>, 27(7):1153–1194, 2017. URL: <a class="reference external" href="https://alexhkurz.github.io/papers/Ordered-algebras.pdf">https://alexhkurz.github.io/papers/Ordered-algebras.pdf</a>.</p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id2">McK96</a></span></dt>
+<dd><p>Ralph McKenzie. An algebraic version of categorical equivalence for varieties and more general algebraic categories. <em>Logic and Algebra</em>, 1996.</p>
+</dd>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id4">Mor18</a></span></dt>
+<dd><p>Tommaso Moraschini. A logical and algebraic characterization of adjunctions between generalized quasi-varieties. <em>J. Symb. Log.</em>, 83(3):899–919, 2018. URL: <a class="reference external" href="https://arxiv.org/pdf/1908.00534.pdf">https://arxiv.org/pdf/1908.00534.pdf</a>.</p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id3">Por00</a></span></dt>
+<dd><p>H.E. Porst. Equivalence of varieties in general and of bool in particular. <em>Algebra Universalis</em>, 2000. URL: <a class="reference external" href="https://user.informatik.uni-bremen.de/porst/dvis/PorstEqV.pdf">https://user.informatik.uni-bremen.de/porst/dvis/PorstEqV.pdf</a>.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="further-references">
 <h2>Further References<a class="headerlink" href="#further-references" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id2">
-<div class="citation" id="id5" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>Blo76<span class="fn-bracket">]</span></span>
-<p>Stephen L. Bloom. Varieties of ordered algebras. <em>J. Comput. Syst. Sci.</em>, 13(2):200–212, 1976. URL: <a class="reference external" href="https://doi.org/10.1016/S0022-0000(76)80030-X">https://doi.org/10.1016/S0022-0000(76)80030-X</a>, <a class="reference external" href="https://doi.org/10.1016/S0022-0000(76)80030-X">doi:10.1016/S0022-0000(76)80030-X</a>.</p>
+<ul class="simple">
+<li><p>H.-E. Porst. Generalized Morita Theories. Notices of the South African Mathematical Society, 32:4–16, 2001.</p></li>
+<li><p>Porst, <a class="reference external" href="https://dml.cz/bitstream/handle/10338.dmlcz/119217/CommentatMathUnivCarolRetro_41-2000-4_19.pdf">Hu’s Primal Algebra Theorem revisited</a>, Commentationes Mathematicae Universitatis Carolinae, Vol. 41 (2000),</p></li>
+<li><p>Porst, <a class="reference external" href="http://www.numdam.org/article/CTGDC_1993__34_3_229_0.pdf">The Linton theorem revisited</a>, Cahiers de topologie et géométrie différentielle catégoriques (1993).</p></li>
+</ul>
 </div>
-<div class="citation" id="id3" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>BW83<span class="fn-bracket">]</span></span>
-<p>Stephen L. Bloom and Jesse B. Wright. P-varieties - a signature independent characterization of varieties of ordered algebras. <em>Journal of Pure and Applied Algebra</em>, 29(1):13–58, 1983. URL: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/0022404983900804">https://www.sciencedirect.com/science/article/pii/0022404983900804</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1016/0022-4049(83)90080-4">doi:https://doi.org/10.1016/0022-4049(83)90080-4</a>.</p>
-</div>
-<div class="citation" id="id6" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>KV17<span class="fn-bracket">]</span></span>
-<p>Alexander Kurz and Jiri Velebil. Quasivarieties and varieties of ordered algebras: regularity and exactness. <em>Math. Struct. Comput. Sci.</em>, 27(7):1153–1194, 2017. URL: <a class="reference external" href="https://alexhkurz.github.io/papers/Ordered-algebras.pdf,s">https://alexhkurz.github.io/papers/Ordered-algebras.pdf,s</a>, <a class="reference external" href="https://doi.org/10.1017/S096012951500050X">doi:10.1017/S096012951500050X</a>.</p>
-</div>
-</div>
-</div>
-</section>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
 </div>
-</section>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -498,6 +516,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#current-plan-of-content">Current Plan of Content</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-references">Further References</a></li>
 </ul>
   </nav></div>

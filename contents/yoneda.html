@@ -7,8 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Yoneda Embedding &#8212; Topics in Category Theory</title>
   
   
@@ -163,6 +162,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="regular-and-exact-categories.html">Regular and Exact Categories</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lawveres-characterization-of-varieties.html">Lawvere’s Characterization of Varieties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clones.html">Clones, Monads, Lawvere Theories</a></li>
 </ul>
 
     </div>
@@ -372,7 +372,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="the-yoneda-embedding">
+  <div class="tex2jax_ignore mathjax_ignore section" id="the-yoneda-embedding">
 <h1>The Yoneda Embedding<a class="headerlink" href="#the-yoneda-embedding" title="Permalink to this heading">#</a></h1>
 <p>(under construction)</p>
 <p>I leave it as an exercise to show that the following implicit definitions are equivalent to the familiar ones.</p>
@@ -381,12 +381,12 @@ document.write(`
 <p><span class="math notranslate nohighlight">\(X(x,y)=1\)</span> means <span class="math notranslate nohighlight">\(x\le y\)</span> and <span class="math notranslate nohighlight">\(X(x,y)=0\)</span> means <span class="math notranslate nohighlight">\(x\not\le y\)</span>. The function <span class="math notranslate nohighlight">\(X(x,y)\)</span> is order-reversing in <span class="math notranslate nohighlight">\(x\)</span> and order-preserving in <span class="math notranslate nohighlight">\(y\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(\mathcal C(A,B)\)</span> is the set of arrows <span class="math notranslate nohighlight">\(A\to B\)</span>. The functor <span class="math notranslate nohighlight">\(\mathcal C(A,B)\)</span> is contravariant in <span class="math notranslate nohighlight">\(A\)</span> and covariant in <span class="math notranslate nohighlight">\(B\)</span>.</p>
 <p>Note that <span class="math notranslate nohighlight">\(\mathcal C^{op}(A,B)=\mathcal C(B,A)\)</span>.</p>
-<section id="warm-up">
+<div class="section" id="warm-up">
 <h2>Warm-up<a class="headerlink" href="#warm-up" title="Permalink to this heading">#</a></h2>
 <p>An arrow <span class="math notranslate nohighlight">\(f:B\to A\)</span> is mono if <span class="math notranslate nohighlight">\(\mathcal C(X,f):\mathcal C(X,B)\to \mathcal (X,A)\)</span> is injective for all <span class="math notranslate nohighlight">\(X\in\mathcal C\)</span>.</p>
 <p>An arrow <span class="math notranslate nohighlight">\(f:A\to B\)</span> is epi if <span class="math notranslate nohighlight">\(\mathcal C(f,X):\mathcal C(B,X)\to \mathcal (A,X)\)</span> is injective for all <span class="math notranslate nohighlight">\(X\in\mathcal C\)</span>.</p>
-</section>
-<section id="limits">
+</div>
+<div class="section" id="limits">
 <h2>Limits<a class="headerlink" href="#limits" title="Permalink to this heading">#</a></h2>
 <p><strong>Categories:</strong> <span class="math notranslate nohighlight">\(A\times B\)</span> is the product of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> iff</p>
 <div class="math notranslate nohighlight">
@@ -397,8 +397,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[X(z,x\wedge y) = X(z,x)\wedge X(z,y)\]</div>
 <p>where the <span class="math notranslate nohighlight">\(\wedge\)</span> on the left is the meet in <span class="math notranslate nohighlight">\(X\)</span> defined by the equation and the <span class="math notranslate nohighlight">\(\wedge\)</span> on the right is the “and” in the 2-element Boolean algebra.</p>
-</section>
-<section id="colimits">
+</div>
+<div class="section" id="colimits">
 <h2>Colimits<a class="headerlink" href="#colimits" title="Permalink to this heading">#</a></h2>
 <p><strong>Categories:</strong> <span class="math notranslate nohighlight">\(A + B\)</span> is the product of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> iff</p>
 <div class="math notranslate nohighlight">
@@ -407,8 +407,8 @@ document.write(`
 <p><strong>Orders:</strong> <span class="math notranslate nohighlight">\(x\vee y\)</span> is the join of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> iff</p>
 <div class="math notranslate nohighlight">
 \[X(x\vee y,z) = X(x,z)\wedge X(y,z).\]</div>
-</section>
-<section id="id1">
+</div>
+<div class="section" id="id1">
 <h2>The Yoneda Embedding<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>We have seen that various category theoretic notions can be defined both explicitely via universal properties and implicitely via equations up to isomorphism.</p>
 <p>There is a general explanation for this, that is based on the following results.</p>
@@ -417,19 +417,19 @@ document.write(`
 <li><p>The Yoneda embedding preserves limits.</p></li>
 <li><p>The Yoneda embedding is fully faithful.</p></li>
 </ul>
-<p>For every small<a class="footnote-reference brackets" href="#small" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> category <span class="math notranslate nohighlight">\(\mathcal C\)</span> there is a functor</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a091ffbe-9ea5-47cb-9035-5d14a9326439">
-<span class="eqno">(1)<a class="headerlink" href="#equation-a091ffbe-9ea5-47cb-9035-5d14a9326439" title="Permalink to this equation">#</a></span>\[\begin{align}
+<p>For every small<a class="footnote-reference brackets" href="#small" id="id2">1</a> category <span class="math notranslate nohighlight">\(\mathcal C\)</span> there is a functor</p>
+<div class="amsmath math notranslate nohighlight" id="equation-98e68ee7-ffbe-45b5-8c4f-69b273ff4c16">
+<span class="eqno">(1)<a class="headerlink" href="#equation-98e68ee7-ffbe-45b5-8c4f-69b273ff4c16" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal C^{op}\times \mathcal C  &amp; \to \sf Set\\
 A\ ,B &amp; \mapsto \mathcal C(A,B)
 \end{align}\]</div>
 <p>The two Yoneda embeddings are obtained by fixing one of the coordinates</p>
-<div class="amsmath math notranslate nohighlight" id="equation-31b58ebc-186d-4467-a285-40d4e4b5b694">
-<span class="eqno">(2)<a class="headerlink" href="#equation-31b58ebc-186d-4467-a285-40d4e4b5b694" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d02ed803-c6ad-41ab-89a1-ed11b6388bf6">
+<span class="eqno">(2)<a class="headerlink" href="#equation-d02ed803-c6ad-41ab-89a1-ed11b6388bf6" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal C(-,A) : \mathcal C^{op}  &amp; \to \sf Set\\
 \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-6fe0f04f-74bf-42d9-b54a-ba2065167ddd">
-<span class="eqno">(3)<a class="headerlink" href="#equation-6fe0f04f-74bf-42d9-b54a-ba2065167ddd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9ff17ab6-cb78-4d6e-aa78-14a2e38ebab5">
+<span class="eqno">(3)<a class="headerlink" href="#equation-9ff17ab6-cb78-4d6e-aa78-14a2e38ebab5" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal C(A,-) : \mathcal C  &amp; \to \sf Set\\
 \end{align}\]</div>
 <ul class="simple">
@@ -442,9 +442,9 @@ A\ ,B &amp; \mapsto \mathcal C(A,B)
 <li><p>The case of epis is the dual, using that an epi in <span class="math notranslate nohighlight">\(\mathcal C\)</span> is a mono in <span class="math notranslate nohighlight">\(\mathcal C^{op}\)</span>.</p></li>
 </ul>
 <p><strong>Exercise:</strong> How does applying this methodology plays out in the case of products (or limits)?</p>
-<p><strong>Exercise:</strong> Show that the Yoneda embedding preserves limits, that is, if <span class="math notranslate nohighlight">\(C\cong\lim D\)</span> then <span class="math notranslate nohighlight">\(\mathcal C(X,C)\cong\lim\mathcal C(X,D)\)</span>. <a class="footnote-reference brackets" href="#functorcategory" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
-</section>
-<section id="order-enriched-categories">
+<p><strong>Exercise:</strong> Show that the Yoneda embedding preserves limits, that is, if <span class="math notranslate nohighlight">\(C\cong\lim D\)</span> then <span class="math notranslate nohighlight">\(\mathcal C(X,C)\cong\lim\mathcal C(X,D)\)</span>. <a class="footnote-reference brackets" href="#functorcategory" id="id3">2</a></p>
+</div>
+<div class="section" id="order-enriched-categories">
 <h2>Order-Enriched Categories<a class="headerlink" href="#order-enriched-categories" title="Permalink to this heading">#</a></h2>
 <p>Many categories have more structure than just being a category. For example, in a category of ordered structures one can define an order on morphisms pointwise. Then homsets are ordered sets, typically partial orders (posets). Given such a category <span class="math notranslate nohighlight">\(\mathcal C\)</span>, we have a functor</p>
 <div class="math notranslate nohighlight">
@@ -458,16 +458,16 @@ A\ ,B &amp; \mapsto \mathcal C(A,B)
 \[\mathcal C(C,A\times B)\cong \mathcal C(C,A)\times  \mathcal C(C,B)\]</div>
 <p>to be an isomorphism in the category of posets?</p>
 <hr class="footnotes docutils" />
-<aside class="footnote brackets" id="small" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
-<p>Small here means that the collection <span class="math notranslate nohighlight">\(\mathcal C_0\)</span> of objects of <span class="math notranslate nohighlight">\(\mathcal C\)</span> is an object in <span class="math notranslate nohighlight">\(\sf Set\)</span>. Many categories do have a “proper class” of objects. In that case, one can use a category <span class="math notranslate nohighlight">\(\sf Set\)</span> that has so-called Grothendieck universes (or an inaccessible cardinal).</p>
-</aside>
-<aside class="footnote brackets" id="functorcategory" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
-<p>If <span class="math notranslate nohighlight">\(D:\mathcal I\to\mathcal C\)</span> is a functor (<span class="math notranslate nohighlight">\(D\)</span> for “diagram”), then <span class="math notranslate nohighlight">\(\mathcal C(X,D)\)</span> is the induced  functor <span class="math notranslate nohighlight">\(\mathcal I\to \sf Set\)</span>.</p>
-</aside>
-</section>
-</section>
+<dl class="footnote brackets">
+<dt class="label" id="small"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>Small here means that the collection <span class="math notranslate nohighlight">\(\mathcal C_0\)</span> of objects of <span class="math notranslate nohighlight">\(\mathcal C\)</span> is an object in <span class="math notranslate nohighlight">\(\sf Set\)</span>. Many categories do have a “proper class” of objects. In that case, one can use a category <span class="math notranslate nohighlight">\(\sf Set\)</span> that has so-called Grothendieck universes (or an inaccessible cardinal).</p>
+</dd>
+<dt class="label" id="functorcategory"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p>If <span class="math notranslate nohighlight">\(D:\mathcal I\to\mathcal C\)</span> is a functor (<span class="math notranslate nohighlight">\(D\)</span> for “diagram”), then <span class="math notranslate nohighlight">\(\mathcal C(X,D)\)</span> is the induced  functor <span class="math notranslate nohighlight">\(\mathcal I\to \sf Set\)</span>.</p>
+</dd>
+</dl>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

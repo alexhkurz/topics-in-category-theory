@@ -7,8 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lawvere’s Characterization of Varieties &#8212; Topics in Category Theory</title>
   
   
@@ -68,6 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/lawveres-characterization-of-varieties';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Clones, Monads, Lawvere Theories" href="clones.html" />
     <link rel="prev" title="Regular and Exact Categories" href="regular-and-exact-categories.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -162,6 +162,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="regular-and-exact-categories.html">Regular and Exact Categories</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Lawvere’s Characterization of Varieties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clones.html">Clones, Monads, Lawvere Theories</a></li>
 </ul>
 
     </div>
@@ -357,6 +358,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projective-objects">Projective Objects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finitely-presentable-projectives">Finitely Presentable Projectives</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generators">Generators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lawvere-s-theorem">Lawvere’s Theorem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
@@ -372,13 +374,20 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lawvere-s-characterization-of-varieties">
+  <div class="tex2jax_ignore mathjax_ignore section" id="lawvere-s-characterization-of-varieties">
 <h1>Lawvere’s Characterization of Varieties<a class="headerlink" href="#lawvere-s-characterization-of-varieties" title="Permalink to this heading">#</a></h1>
 <p>(under construction)</p>
-<section id="introduction">
+<div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
-<p>In a previous note on <a class="reference internal" href="regular-and-exact-categories.html"><span class="doc std std-doc">Regular and Exact Categories</span></a> we said that regular and exact categories generalise quasi-varities and varities.</p>
+<p>In a previous note on <a class="reference internal" href="regular-and-exact-categories.html"><span class="doc std std-doc">Regular and Exact Categories</span></a> we said that regular and exact categories generalise quasi-varieties and varieties.</p>
 <p>Lawvere’s theorem turns this analogy into a theorem.</p>
+<p>Roughly speaking a functor <span class="math notranslate nohighlight">\(U:\cal A\to\sf Set\)</span> is a quasi-variety if</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(U\)</span> preserves limits</p></li>
+<li><p><span class="math notranslate nohighlight">\(U\)</span> has a left-adjoint</p></li>
+<li><p><span class="math notranslate nohighlight">\(U\)</span> preserves filtered colimits <a class="footnote-reference brackets" href="#filteredcolimits" id="id1">1</a></p></li>
+</ul>
+<p>To characterise varieties, we need to add a condition that accounts for “closure under quotients”. This can be done in different ways.<a class="footnote-reference brackets" href="#quotients" id="id2">2</a></p>
 <p>It is important to understand that Lawvere’s theorem takes varieties as abstract categories in the following sense.</p>
 <ul class="simple">
 <li><p>Two varieties are considered equivalent if they are equivalent as categories, forgetting the forgetful functors.</p></li>
@@ -398,52 +407,69 @@ document.write(`
 <p>More generally, we will write <span class="math notranslate nohighlight">\(X\bullet A\)</span> for the <span class="math notranslate nohighlight">\(n\)</span>-fold coproduct of <span class="math notranslate nohighlight">\(A\)</span>. It is called the tensor or copower and defined by an equation similarly to the one above, replacing <span class="math notranslate nohighlight">\(2\)</span> by <span class="math notranslate nohighlight">\(X\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-copower">
 <span class="eqno">(4)<a class="headerlink" href="#equation-copower" title="Permalink to this equation">#</a></span>\[\mathcal C(X\bullet A,C)\cong Set(X,\mathcal C(A,C)).\]</div>
-</section>
-<section id="projective-objects">
+</div>
+<div class="section" id="projective-objects">
 <h2>Projective Objects<a class="headerlink" href="#projective-objects" title="Permalink to this heading">#</a></h2>
+<p>In this section, we will show how to equip a regular category <span class="math notranslate nohighlight">\(\cal A\)</span> with a forgetful functor <span class="math notranslate nohighlight">\(U:\cal A\to Set\)</span>.</p>
 <p><strong>Definition:</strong> An object <span class="math notranslate nohighlight">\(P\)</span> in a regular category <span class="math notranslate nohighlight">\(\mathcal C\)</span> is <strong>regular projective</strong> (or just <strong>projective</strong> for short) if for every regular epi <span class="math notranslate nohighlight">\(e:A\to B\)</span> and for every <span class="math notranslate nohighlight">\(f:P\to B\)</span> there is <span class="math notranslate nohighlight">\(P\to B\)</span> such that</p>
 <a class="reference internal image-reference" href="../_images/projective.png"><img alt="../_images/projective.png" src="../_images/projective.png" style="width: 500px;" /></a>
 <p>commutes.</p>
 <p><strong>Remark:</strong> Although we didn’t make this explicit, one can see that the definition of projective object is parametric in a class of “epis” <span class="math notranslate nohighlight">\(e\)</span>. There are various other interesting classes of epis, but in our context we will only be interested in regular epis. Remember that in the context of universal algebra, the regular epis are exactly the surjections.</p>
 <p>The following observation is pivotal.</p>
-<p><strong>Exercise:</strong> Free objects in a (quasi)variety are projective. <a class="footnote-reference brackets" href="#freeisprojective" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<p><strong>Exercise:</strong> Free objects in a (quasi)variety are projective. <a class="footnote-reference brackets" href="#freeisprojective" id="id3">3</a></p>
 <p>Much of what is interesting in the following rests on the fact that while all free objects are projective the converse is not true. But, as alluded to in the introduction, for every projective object there is a forgetful functor that makes it free (even free over one generator).</p>
 <p><strong>Exercise:</strong> In the category of Boolean algebras, every finite algebra apart from the trivial (=one element) one is projective.</p>
 <p>The previous exercise leads to a more general result:</p>
 <p><strong>Exercise:</strong> The retract of a free (or just a projective) algebra is projective.</p>
 <p>To complete the picture:</p>
 <p><strong>Exercise:</strong> In a (quasi)variety, the projectives are precisely the retracts of the free algebras.</p>
-</section>
-<section id="generators">
+<p><strong>Observation:</strong> Let <span class="math notranslate nohighlight">\(P\)</span> be a regular projective in a regular category <span class="math notranslate nohighlight">\(\cal A\)</span>. Define <span class="math notranslate nohighlight">\(U=\cal A(P,-)\)</span>.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(U\)</span> preserves limits since hom-functors preserve limits.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\cal\rm A(P,A) \cong \sf Set(1,UA)\)</span>, that is, <span class="math notranslate nohighlight">\(P\)</span> is the free algebra on one generator given <span class="math notranslate nohighlight">\(U:\cal A\to\sf Set\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(U\)</span> preserves regular epis.<a class="footnote-reference brackets" href="#preserveregularepis" id="id4">4</a></p></li>
+</ul>
+</div>
+<div class="section" id="finitely-presentable-projectives">
+<h2>Finitely Presentable Projectives<a class="headerlink" href="#finitely-presentable-projectives" title="Permalink to this heading">#</a></h2>
+<p>In this section, we will give a necessary and sufficient condition for <span class="math notranslate nohighlight">\(U=\mathcal A(P,-)\)</span> to preserve filtered colimits.</p>
+<p>In fact, to say that <span class="math notranslate nohighlight">\(\mathcal A(P,-)\)</span> preserves filtered colimits is just the definition of <span class="math notranslate nohighlight">\(P\)</span> being <a class="reference external" href="https://ncatlab.org/nlab/show/compact+object#FinitelyPresentableObject">finitely presentable</a>.</p>
+<p>Thus, in the following, we are interested in finitely presentable regular projectives.</p>
+<p>In the context of (quasi)varieties, the finitely presentable regular projectives are exactly the retracts of finitely generated free algebras.</p>
+</div>
+<div class="section" id="generators">
 <h2>Generators<a class="headerlink" href="#generators" title="Permalink to this heading">#</a></h2>
+<p>In this section, we will find a condition that guarantees that <span class="math notranslate nohighlight">\(U=\mathcal A(P,-)\)</span> has a left-adjoint.</p>
 <p>So far, we found an abstract replacement for free algebras, namely projective objects.</p>
 <p>Before we can prove Lawvere’s theorem, we need to capture another property of free algebras in (quasi)varieties:</p>
 <p>In every (quasi)variety, every object <span class="math notranslate nohighlight">\(A\)</span> is the quotient of a free algebra. Using the adjunction <span class="math notranslate nohighlight">\(F\dashv U:\mathcal A\to Set\)</span> we can make this more precise. As all adjunctions, this adjunction provides us with a “counit”</p>
 <div class="math notranslate nohighlight">
 \[\epsilon_A:FUA\to A.\]</div>
-<p>It also follows from the definition of adjunction that this counit is a coequalizer<a class="footnote-reference brackets" href="#counitcoequaliser" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, hence a regular epi. Moreover, since <span class="math notranslate nohighlight">\(F\)</span> (being a left adjoint) preserves colimits we can write this as</p>
+<p>It also follows from the definition of adjunction that this counit is a coequalizer<a class="footnote-reference brackets" href="#counitcoequaliser" id="id5">5</a>, hence a regular epi. Moreover, since <span class="math notranslate nohighlight">\(F\)</span> (being a left adjoint) preserves colimits we can write this as</p>
 <div class="math notranslate nohighlight">
 \[\epsilon_A:UA\bullet F1\to A\]</div>
 <p>where <span class="math notranslate nohighlight">\(\bullet\)</span>, the so-called copower, is the <span class="math notranslate nohighlight">\(|UA|\)</span>-fold coproduct of <span class="math notranslate nohighlight">\(F1\)</span> with itself. What is important here is that all <span class="math notranslate nohighlight">\(FUA\)</span> arise as a coproduct of one single object, which is then the so-called projective generator we are looking for. Technically, it is worth noting that</p>
 <div class="math notranslate nohighlight">
 \[FUA\cong F(UA\bullet 1) \cong UA\bullet F1\]</div>
-<p>because <span class="math notranslate nohighlight">\(\bullet\)</span> is a colimit <a class="footnote-reference brackets" href="#copower" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> and <span class="math notranslate nohighlight">\(F\)</span> (being a left adjoint) preserves colimits.</p>
+<p>because <span class="math notranslate nohighlight">\(\bullet\)</span> is a colimit <a class="footnote-reference brackets" href="#copower" id="id6">6</a> and <span class="math notranslate nohighlight">\(F\)</span> (being a left adjoint) preserves colimits.</p>
 <p><strong>Definition:</strong> A regular category <span class="math notranslate nohighlight">\(\mathcal C\)</span> has <strong>generator</strong> <span class="math notranslate nohighlight">\(G\)</span> if for all objects <span class="math notranslate nohighlight">\(C\)</span> there is a set <span class="math notranslate nohighlight">\(X\)</span> and a regular epi <span class="math notranslate nohighlight">\(X\bullet G\to C\)</span>. If <span class="math notranslate nohighlight">\(G\)</span> is also projective, it is called a <strong>projective generator</strong>.</p>
 <p><strong>Remark:</strong> We will use below that the definition <a class="reference internal" href="#equation-copower">(4)</a> of the copower <span class="math notranslate nohighlight">\(\bullet\)</span>, written as an implicit definition in the form of the equation</p>
 <div class="math notranslate nohighlight">
 \[\mathcal C(X\bullet G,C)\cong Set(X,\mathcal C(G,C)),\]</div>
 <p>is exactly saying that <span class="math notranslate nohighlight">\(-\bullet G\)</span>  is left adjoint to <span class="math notranslate nohighlight">\(\mathcal C(G,-)\)</span>.</p>
 <p><strong>Question:</strong> Which varieties arise from declaring any non-trivial finite Boolean algebra as free over one generator? …</p>
-</section>
-<section id="lawvere-s-theorem">
+</div>
+<div class="section" id="lawvere-s-theorem">
 <h2>Lawvere’s Theorem<a class="headerlink" href="#lawvere-s-theorem" title="Permalink to this heading">#</a></h2>
 <p>As a stepping stone to Lawvere’s theorem we first prove its variation for quasi-varieties.</p>
 <p>… maybe sth on “weak” quasi-varieties (Bloom and Wright, 1982) … a functor <span class="math notranslate nohighlight">\(U: \mathcal A \to Set\)</span> is a weak quasi-variety if <span class="math notranslate nohighlight">\(U\)</span> has a left adjoint and <span class="math notranslate nohighlight">\(U\)</span> preserves and reflects regular epis … iff <span class="math notranslate nohighlight">\(U\)</span> is isomorphic to a category of algebras defined by (possibly infinitary) operations and closed under <span class="math notranslate nohighlight">\(\sf SP\)</span> …</p>
-<p><strong>Theorem:</strong> A category is equivalent to a quasivariety iff it is regular and has a finitely presentable projective generator.</p>
-<p><em>Proof:</em> Every quasi-variety is regular and has the free algebra over one generator as a projective generator. Conversely, let <span class="math notranslate nohighlight">\(G\)</span> be a projective generator in a regular category <span class="math notranslate nohighlight">\(\mathcal A\)</span>. Then <span class="math notranslate nohighlight">\(UA=\mathcal A(G,A)\)</span> has a left adjoint <span class="math notranslate nohighlight">\(FX=X\bullet G\)</span>, since the equation defining the adjointness <span class="math notranslate nohighlight">\(F\dashv U\)</span></p>
+<p><strong>Theorem:</strong> A category is equivalent to a quasi-variety iff it is regular and has a finitely presentable regular projective generator.</p>
+<p><em>Proof:</em> Every quasi-variety is regular and has the free algebra over one generator as a projective generator. Conversely, let <span class="math notranslate nohighlight">\(G\)</span> be a finitely presentable regular projective generator in a regular category <span class="math notranslate nohighlight">\(\mathcal A\)</span>. Then <span class="math notranslate nohighlight">\(UA=\mathcal A(G,A)\)</span> has a left adjoint <span class="math notranslate nohighlight">\(FX=X\bullet G\)</span>, since the equation defining the adjointness <span class="math notranslate nohighlight">\(F\dashv U\)</span></p>
 <div class="math notranslate nohighlight">
 \[\mathcal A(X\bullet G,A)\cong Set(X,\mathcal A(G,A))\]</div>
-<p>coincides in the case at hand with the equation defining the copower <span class="math notranslate nohighlight">\(\bullet\)</span>.<a class="footnote-reference brackets" href="#fdashvu" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
+<p>coincides in the case at hand with the equation defining the copower <span class="math notranslate nohighlight">\(\bullet\)</span>.<a class="footnote-reference brackets" href="#fdashvu" id="id7">7</a></p>
+<p>It follows from general categorical results that <span class="math notranslate nohighlight">\(UF\)</span> is a <a class="reference external" href="https://ncatlab.org/nlab/show/finitary+monad#definition">finitary monad</a><a class="footnote-reference brackets" href="#finitarymonad" id="id8">8</a> and that there is a <a class="reference external" href="https://ncatlab.org/nlab/show/comparison+functor#statement">comparison functor</a> <span class="math notranslate nohighlight">\(\cal A\to{\sf Alg}(M)\)</span> to the category <span class="math notranslate nohighlight">\({\sf Alg}(M)\)</span> of algebras for the monad. Since <span class="math notranslate nohighlight">\(U\)</span> is closed under limits in <span class="math notranslate nohighlight">\({\sf Alg}(M)\)</span>, <span class="math notranslate nohighlight">\(\cal A\)</span> is a quasi-variety.</p>
+<hr class="docutils" />
 <p>This gives us already part of what we need for a quasi-variety. But we still seem far away from obtaining the operations and implications defining the quasi-varitey. Can we extract them from the adjunction?</p>
 <p>The answer is yes and relies on an important idea of Lawvere, of independent interest, known as implicit operations. It can be used to show that algebras for a monad are defined by operations and equations and, if the base category (as it is here) is the category of sets, then <span class="math notranslate nohighlight">\({\sf Alg(T)}\)</span> is a category of algebras defined by operations and equations (in the sense of universal algebra).</p>
 <p>Given that result, the proof of which we postponed, it remains to show that <span class="math notranslate nohighlight">\(\mathcal A\)</span> is a full subcategory of <span class="math notranslate nohighlight">\({\sf Alg}(T)\)</span> closed under subalgebras and products.</p>
@@ -451,12 +477,12 @@ document.write(`
 <p>The composition <span class="math notranslate nohighlight">\(UF\)</span> has special properties. These properties appear in many different areas of mathematics, logic and computer science and are distilled into the notion of a <strong>monad</strong>. For now, we only need to know that</p>
 <ul class="simple">
 <li><p>every adjunction <span class="math notranslate nohighlight">\(F\dashv U\)</span> gives rise to a monad <span class="math notranslate nohighlight">\(UF\)</span>;</p></li>
-<li><p>every monad <span class="math notranslate nohighlight">\(T\)</span> gives rise to a category of algebras <span class="math notranslate nohighlight">\({\sf Alg}(T)\)</span>;<a class="footnote-reference brackets" href="#eilenbergmoorealgebras" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p></li>
+<li><p>every monad <span class="math notranslate nohighlight">\(T\)</span> gives rise to a category of algebras <span class="math notranslate nohighlight">\({\sf Alg}(T)\)</span>;<a class="footnote-reference brackets" href="#eilenbergmoorealgebras" id="id9">9</a></p></li>
 <li><p>whenever we have an adjunction <span class="math notranslate nohighlight">\(F\dashv U:\mathcal A\to \mathcal X\)</span> there is a <a class="reference external" href="https://ncatlab.org/nlab/show/comparison+functor">comparison functor</a> <span class="math notranslate nohighlight">\(K:\mathcal A\to {\sf Alg}(UF)\)</span>, which is compatible with the adjoint functors.</p></li>
 </ul>
 <p>It remains to show that … (to be continued) …</p>
-</section>
-<section id="references">
+</div>
+<div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <p>Lawvere’s theorem is Theorem 1 in Chapter 2 of his PhD thesis</p>
 <ul>
@@ -482,37 +508,46 @@ document.write(`
 <ul class="simple">
 <li><p>https://ncatlab.org/nlab/show/projective+object</p></li>
 </ul>
-<p><span id="id6">[]</span>
-<span id="id7">[]</span>
-<span id="id8">[]</span>
-<span id="id9">[]</span></p>
-</section>
-<section id="diagrams">
+<p><span id="id10">[<a class="reference internal" href="../intro.html#id18" title="Alexander Kurz and J. Velebil. Quasivarieties and varieties of ordered algebras: regularity and exactness. Math. Struct. Comput. Sci., 27(7):1153–1194, 2017. URL: https://alexhkurz.github.io/papers/Ordered-algebras.pdf.">Kurz and Velebil, 2017</a>]</span></p>
+<p><span id="id11">[<a class="reference internal" href="../intro.html#id15" title="Stephen L. Bloom and Jesse B. Wright. P-varieties - a signature independent characterization of varieties of ordered algebras. Journal of Pure and Applied Algebra, 29(1):13-58, 1983. URL: https://doi.org/10.1016/0022-4049(83)90080-4.">Bloom and Wright, 1983</a>]</span>
+<span id="id12">[]</span>
+<span id="id13">[<a class="reference internal" href="../intro.html#id17" title="Stephen L. Bloom. Varieties of ordered algebras. J. Comput. Syst. Sci., 13(2):200–212, 1976. URL: https://doi.org/10.1016/S0022-0000(76)80030-X.">Bloom, 1976</a>]</span></p>
+</div>
+<div class="section" id="diagrams">
 <h2>Diagrams<a class="headerlink" href="#diagrams" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="https://q.uiver.app/#q=WzAsMyxbMCwwLCJBIl0sWzIsMCwiQiJdLFsxLDIsIlAiXSxbMCwxLCJlIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIsMCwiZyIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDEsImYiLDJdXQ==">projective</a></p>
 <hr class="footnotes docutils" />
-<aside class="footnote brackets" id="freeisprojective" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>This uses the defining property of adjunction <span class="math notranslate nohighlight">\(\mathcal A(FX,B)\cong Set(X,UB)\)</span> and that regular epis are surjective (hence split (=have half-inverses) in <span class="math notranslate nohighlight">\(Set\)</span>).</p>
-</aside>
-<aside class="footnote brackets" id="counitcoequaliser" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
-<p>See <a class="reference external" href="https://ncatlab.org/nlab/show/split+coequalizer#examples">nLab#split coequalizer#Examples</a> for details.</p>
-</aside>
-<aside class="footnote brackets" id="copower" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
-<p>See <a class="reference internal" href="#equation-copower">(4)</a> and <a class="reference external" href="https://ncatlab.org/nlab/show/copower">nLab#copower</a>.</p>
-</aside>
-<aside class="footnote brackets" id="fdashvu" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
-<p>This is a pattern that repeats itself in many different places in category theory. It is worth spending some time meditating over it. Also recall the Preliminary Exercise from above.</p>
-</aside>
-<aside class="footnote brackets" id="eilenbergmoorealgebras" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
-<p><span class="math notranslate nohighlight">\({\sf Alg}(T)\)</span> is also known as the category of Eilenberg-Moore algebras. It is also common to use “module” instead of “algebra”, a perpsective that is particularly natural in the context of additive categories and, more generally, enriched categories.</p>
-</aside>
-</section>
-</section>
+<dl class="footnote brackets">
+<dt class="label" id="filteredcolimits"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>In the context of (quasi)varieties, this condition is equivalent to saying that the defining operations have finite arity.</p>
+</dd>
+<dt class="label" id="quotients"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Add a note on Beck’s theorem, reflexive coequalizers, Barr exactness, …</p>
+</dd>
+<dt class="label" id="freeisprojective"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>This uses the defining property of adjunction <span class="math notranslate nohighlight">\(\mathcal A(FX,B)\cong Set(X,UB)\)</span> and that regular epis are surjective (hence split (=have half-inverses) in <span class="math notranslate nohighlight">\(\sf Set\)</span>).</p>
+</dd>
+<dt class="label" id="preserveregularepis"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>That <span class="math notranslate nohighlight">\(\mathcal A(P,-)\)</span> preserves regular epis is often taken as the definition of <span class="math notranslate nohighlight">\(P\)</span> being regular projective.</p>
+</dd>
+<dt class="label" id="counitcoequaliser"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p>See <a class="reference external" href="https://ncatlab.org/nlab/show/split+coequalizer#examples">nLab#split coequalizer#Examples</a> for details.</p>
+</dd>
+<dt class="label" id="copower"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p>See <a class="reference internal" href="#equation-copower">(4)</a> and <a class="reference external" href="https://ncatlab.org/nlab/show/copower">nLab#copower</a>.</p>
+</dd>
+<dt class="label" id="fdashvu"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dd><p>This is a pattern that repeats itself in many different places in category theory. It is worth spending some time meditating over it. Also recall the Preliminary Exercise from above.</p>
+</dd>
+<dt class="label" id="finitarymonad"><span class="brackets"><a class="fn-backref" href="#id8">8</a></span></dt>
+<dd><p>Every adjunction gives rise to a monad. The monad is finitary (preserves filtered colimits) iff the right-adjoint is finitary.</p>
+</dd>
+<dt class="label" id="eilenbergmoorealgebras"><span class="brackets"><a class="fn-backref" href="#id9">9</a></span></dt>
+<dd><p><span class="math notranslate nohighlight">\({\sf Alg}(T)\)</span> is also known as the category of Eilenberg-Moore algebras. It is also common to use “module” instead of “algebra”, a perpsective that is particularly natural in the context of additive categories and, more generally, enriched categories.</p>
+</dd>
+</dl>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -554,6 +589,15 @@ document.write(`
         <p class="prev-next-title">Regular and Exact Categories</p>
       </div>
     </a>
+    <a class="right-next"
+       href="clones.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Clones, Monads, Lawvere Theories</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -574,6 +618,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projective-objects">Projective Objects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finitely-presentable-projectives">Finitely Presentable Projectives</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generators">Generators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lawvere-s-theorem">Lawvere’s Theorem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>

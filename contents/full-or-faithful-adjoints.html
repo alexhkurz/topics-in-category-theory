@@ -7,8 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Full or Faithful Adjoints &#8212; Topics in Category Theory</title>
   
   
@@ -163,6 +162,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="regular-and-exact-categories.html">Regular and Exact Categories</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lawveres-characterization-of-varieties.html">Lawvere’s Characterization of Varieties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clones.html">Clones, Monads, Lawvere Theories</a></li>
 </ul>
 
     </div>
@@ -368,7 +368,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="full-or-faithful-adjoints">
+  <div class="tex2jax_ignore mathjax_ignore section" id="full-or-faithful-adjoints">
 <h1>Full or Faithful Adjoints<a class="headerlink" href="#full-or-faithful-adjoints" title="Permalink to this heading">#</a></h1>
 <p>We present a theorem that is useful in many situations. It gives necessary and sufficient conditions for an adjoint to be full or to be faithful in terms of the (co)unit of the adjunction.</p>
 <p>Let <span class="math notranslate nohighlight">\(F:X\to A\)</span>, <span class="math notranslate nohighlight">\(G:A\to X\)</span>, <span class="math notranslate nohighlight">\(F\dashv G\)</span>, <span class="math notranslate nohighlight">\(\eta_x:x\to GFx\)</span>, <span class="math notranslate nohighlight">\(\epsilon_a:FGa\to a\)</span>.</p>
@@ -378,10 +378,10 @@ document.write(`
 <p>This is proved using:</p>
 <p><img alt="" src="https://hackmd.io/_uploads/SJRXUJSos.png" /></p>
 <p>From the lemma we obtain the theorem</p>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head text-center"><p>counit componentwise</p></th>
-<th class="head text-center"><p>right adjoint</p></th>
+<tr class="row-odd"><th class="text-center head"><p>counit componentwise</p></th>
+<th class="text-center head"><p>right adjoint</p></th>
 </tr>
 </thead>
 <tbody>
@@ -394,10 +394,10 @@ document.write(`
 </tbody>
 </table>
 <p>and its dual</p>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head text-center"><p>unit componentwise</p></th>
-<th class="head text-center"><p>left adjoint</p></th>
+<tr class="row-odd"><th class="text-center head"><p>unit componentwise</p></th>
+<th class="text-center head"><p>left adjoint</p></th>
 </tr>
 </thead>
 <tbody>
@@ -410,7 +410,7 @@ document.write(`
 </tbody>
 </table>
 <p>as corollaries.</p>
-<section id="the-proof">
+<div class="section" id="the-proof">
 <h2>The proof<a class="headerlink" href="#the-proof" title="Permalink to this heading">#</a></h2>
 <p>For variety, we prove the dual of lemma and theorem.</p>
 <p><strong>Lemma:</strong> Let <span class="math notranslate nohighlight">\(f^\ast:X(-,y) \to X(-,z)\)</span> given by Yoneda for <span class="math notranslate nohighlight">\(f:y\to z\)</span>. Then <span class="math notranslate nohighlight">\(f^\ast\)</span> is componentwise injective iff <span class="math notranslate nohighlight">\(f\)</span> is mono and <span class="math notranslate nohighlight">\(f^\ast\)</span> is componentwise onto iff <span class="math notranslate nohighlight">\(f\)</span> is split epi.</p>
@@ -428,8 +428,8 @@ X(x,UFy)\]</div>
 <p><strong>Example:</strong> Let <span class="math notranslate nohighlight">\(X\)</span> be a category of algebras (variety) and <span class="math notranslate nohighlight">\(A\)</span> be a subvariety defined by imposing additional equations. Then the inclusion <span class="math notranslate nohighlight">\(G:A\to X\)</span> has a left-adjoint <span class="math notranslate nohighlight">\(F:X\to A\)</span>. The inclusion is full and faithful, hence the counit is iso. The unit <span class="math notranslate nohighlight">\(x\to GFx\)</span> takes the quotient of an algebra <span class="math notranslate nohighlight">\(x\)</span> wrt the equations, hence is epi but not necessarily split epi, so we cannot conclude that <span class="math notranslate nohighlight">\(F\)</span> is full. For example, …</p>
 <hr class="docutils" />
 <p><a class="reference external" href="https://q.uiver.app/#q=WzAsNixbMSwxLCJYIl0sWzMsMSwiQSJdLFswLDAsIngiXSxbMCwyLCJHRngiXSxbNCwwLCJGR2EiXSxbNCwyLCJhIl0sWzAsMSwiRiIsMCx7ImN1cnZlIjotMn1dLFsxLDAsIkciLDAseyJjdXJ2ZSI6LTJ9XSxbMCwxLCJcXGJvdCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDMsIlxcZXRhX3giLDFdLFs0LDUsIlxcdmFyZXBzaWxvbl9hIiwxXV0=">Diagrams</a></p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

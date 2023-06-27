@@ -7,8 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clones, Monads, Lawvere Theories &#8212; Topics in Category Theory</title>
   
   
@@ -357,9 +356,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-and-forth-between-the-definitions">Back and Forth Between The Definitions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-universal-algebras-to-lawvere-theories-and-back">From Universal Algebras to Lawvere Theories and back</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-lawvere-theories-to-monads-and-back">From Lawvere Theories to Monads and back</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-universal-algebra-to-monads-and-back">From Universal Algebra to Monads and back</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-algebra-and-lawvere-theories">Universal Algebra and Lawvere Theories</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lawvere-theories-and-monads">Lawvere Theories and Monads</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-algebra-and-monads">Universal Algebra and Monads</a></li>
 </ul>
 </li>
 </ul>
@@ -373,7 +372,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="clones-monads-lawvere-theories">
+  <div class="tex2jax_ignore mathjax_ignore section" id="clones-monads-lawvere-theories">
 <h1>Clones, Monads, Lawvere Theories<a class="headerlink" href="#clones-monads-lawvere-theories" title="Permalink to this heading">#</a></h1>
 <p>Categories of algebras are usually defined wrt to a choice of <em>fundamental operations</em>. The choice of fundamental operations is somewhat arbitrary, their purpose is to define, via composition, the set of all terms. Clones, monads and Lawvere theories are three different ways to axiomatize “collections of all terms” without referring to a choice of fundamental operations.</p>
 <p>The definitions are available in many places, eg at the nLab:</p>
@@ -383,49 +382,48 @@ document.write(`
 <li><p><a class="reference external" href="https://ncatlab.org/nlab/show/Lawvere+theory#definition">Lawvere theory</a></p></li>
 </ul>
 <p>What I want to do here is to sketch why these notions are equivalent.</p>
-<p>We start from a category that has a forgetful (<a class="reference external" href="https://ncatlab.org/nlab/show/faithful+functor">faithful</a>1) functor <span class="math notranslate nohighlight">\(U:\cal A\to\sf Set\)</span> with a left-adjoint <span class="math notranslate nohighlight">\(F\dashv U\)</span>. This includes in particular the case where <span class="math notranslate nohighlight">\(\cal A\)</span> is a <a class="reference external" href="https://ncatlab.org/nlab/show/variety+of+algebras#definitions">variety</a> in the sense of universal algebra, that is, a class of algebras defined by (finitary) operations and equations.</p>
+<p>We start from a category that has a forgetful (<a class="reference external" href="https://ncatlab.org/nlab/show/faithful+functor">faithful</a>) functor <span class="math notranslate nohighlight">\(U:\cal A\to\sf Set\)</span> with a left-adjoint <span class="math notranslate nohighlight">\(F\dashv U\)</span>. This includes in particular the case where <span class="math notranslate nohighlight">\(\cal A\)</span> is a <a class="reference external" href="https://ncatlab.org/nlab/show/variety+of+algebras#definitions">variety</a> in the sense of universal algebra, that is, a class of algebras defined by (finitary) operations and equations.</p>
 <p>In this more general situation, can we say what a term is, only referring to data provided by <span class="math notranslate nohighlight">\(U:\cal A\to\sf Set\)</span>? How can we collect all terms in one mathematical structure? How can we axiomatize this structure so that the axioms pick out exactly the structures that arise from those <span class="math notranslate nohighlight">\(U:\cal A\to\sf Set\)</span> where <span class="math notranslate nohighlight">\(\cal A\)</span> is a variety?</p>
 <p>A key observation is that an <span class="math notranslate nohighlight">\(n\)</span>-ary term can be represented both as a morphism <span class="math notranslate nohighlight">\(F1\to Fn\)</span> and as an element <span class="math notranslate nohighlight">\(1\to UFn\)</span> of the underlying set of the free algebra over <span class="math notranslate nohighlight">\(n\)</span> generators.</p>
 <p>The first leads us to Lawvere theories, the second to monads.</p>
 <p>Given <span class="math notranslate nohighlight">\(U:\cal A\to\sf Set\)</span>, the induced</p>
 <ul class="simple">
-<li><p>Lawvere theory is the opposite of the full subcategory of <span class="math notranslate nohighlight">\(\cal A\)</span> spanned by <span class="math notranslate nohighlight">\(\{Fn \mid n \in \mathbb N\}\)</span>;<a class="footnote-reference brackets" href="#n" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
-<li><p>monad is <span class="math notranslate nohighlight">\(UF\)</span>.<a class="footnote-reference brackets" href="#inducedmonad" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></li>
+<li><p>Lawvere theory is the opposite of the full subcategory of <span class="math notranslate nohighlight">\(\cal A\)</span> spanned by <span class="math notranslate nohighlight">\(\{Fn \mid n \in \mathbb N\}\)</span>;<a class="footnote-reference brackets" href="#n" id="id1">1</a></p></li>
+<li><p>monad is <span class="math notranslate nohighlight">\(UF\)</span>.<a class="footnote-reference brackets" href="#inducedmonad" id="id2">2</a></p></li>
 </ul>
 <p>We will see later more reasons why one may want to define the Lawvere theory as the <em>opposite</em> of the full subcategory of finitely generated free algebras. For now, let us just note that we want to type an <span class="math notranslate nohighlight">\(n\)</span>-ary term as an arrow <span class="math notranslate nohighlight">\(n\to 1\)</span> (because it takes <span class="math notranslate nohighlight">\(n\)</span> inputs and gives <span class="math notranslate nohighlight">\(1\)</span> output), the direction of which is opposite to the one from the morphism <span class="math notranslate nohighlight">\(F1\to Fn\)</span> representing the term.</p>
-<section id="back-and-forth-between-the-definitions">
+<div class="section" id="back-and-forth-between-the-definitions">
 <h2>Back and Forth Between The Definitions<a class="headerlink" href="#back-and-forth-between-the-definitions" title="Permalink to this heading">#</a></h2>
 <p>In the following we sketch the constructions that allows us to go betweem the various axiomatization of algebra. Varieties and Lawvere theories are equivalent. Monads are more general. The monads that are equivalent to Lawvere theories are the finitary monads <span class="math notranslate nohighlight">\(\sf Set\to\sf Set\)</span>.</p>
-<section id="from-universal-algebras-to-lawvere-theories-and-back">
-<h3>From Universal Algebras to Lawvere Theories and back<a class="headerlink" href="#from-universal-algebras-to-lawvere-theories-and-back" title="Permalink to this heading">#</a></h3>
-<p>Given a variety defined by operations and equations, let <span class="math notranslate nohighlight">\(\cal L(n,1)\)</span> be the equivalence classes of <span class="math notranslate nohighlight">\(n\)</span>-ary terms.</p>
-<p>Conversely, given a Lawvere theory, take all elements of <span class="math notranslate nohighlight">\(\cal L(n,1)\)</span> as fundamental operations of arity <span class="math notranslate nohighlight">\(n\)</span> and take all commuting triangles in <span class="math notranslate nohighlight">\(\cal L\)</span> (with codomain <span class="math notranslate nohighlight">\(1\)</span>) as equations.</p>
-</section>
-<section id="from-lawvere-theories-to-monads-and-back">
-<h3>From Lawvere Theories to Monads and back<a class="headerlink" href="#from-lawvere-theories-to-monads-and-back" title="Permalink to this heading">#</a></h3>
-<p>Given a Lawvere theory <span class="math notranslate nohighlight">\(\cal L\)</span>, define <span class="math notranslate nohighlight">\(Mn=\cal L(n,1)\)</span>. To define <span class="math notranslate nohighlight">\(M\)</span> on arrows we make use of the fact that a Lawvere theory comes with an identity-on-object product-preserving functor <span class="math notranslate nohighlight">\(\mathbb F^{op}\to\cal L\)</span>, where <span class="math notranslate nohighlight">\(\mathbb F\)</span> is the category of finite cardinals with all functions.<a class="footnote-reference brackets" href="#mathbbf" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> Finally, it remains to extend <span class="math notranslate nohighlight">\(M\)</span> from finite sets to all sets, which can be done using standard techniques (such as the using the left-Kan extension along <span class="math notranslate nohighlight">\(\mathbb F\to\sf Set\)</span>).</p>
+<div class="section" id="universal-algebra-and-lawvere-theories">
+<h3>Universal Algebra and Lawvere Theories<a class="headerlink" href="#universal-algebra-and-lawvere-theories" title="Permalink to this heading">#</a></h3>
+<p>Given a variety defined by operations and equations, let <span class="math notranslate nohighlight">\(\mathcal L(n,1)\)</span> be the equivalence classes of <span class="math notranslate nohighlight">\(n\)</span>-ary terms.</p>
+<p>Conversely, given a Lawvere theory, take all elements of <span class="math notranslate nohighlight">\(\mathcal L(n,1)\)</span> as fundamental operations of arity <span class="math notranslate nohighlight">\(n\)</span> and take all commuting triangles in <span class="math notranslate nohighlight">\(\cal L\)</span> (with codomain <span class="math notranslate nohighlight">\(1\)</span>) as equations.</p>
+</div>
+<div class="section" id="lawvere-theories-and-monads">
+<h3>Lawvere Theories and Monads<a class="headerlink" href="#lawvere-theories-and-monads" title="Permalink to this heading">#</a></h3>
+<p>Given a Lawvere theory <span class="math notranslate nohighlight">\(\cal L\)</span>, define <span class="math notranslate nohighlight">\(Mn=\mathcal L(n,1)\)</span>. To define <span class="math notranslate nohighlight">\(M\)</span> on arrows we make use of the fact that a Lawvere theory comes with an identity-on-object product-preserving functor <span class="math notranslate nohighlight">\(\mathbb F^{op}\to\cal L\)</span>, where <span class="math notranslate nohighlight">\(\mathbb F\)</span> is the category of finite cardinals with all functions.<a class="footnote-reference brackets" href="#mathbbf" id="id3">3</a> Finally, it remains to extend <span class="math notranslate nohighlight">\(M\)</span> from finite sets to all sets, which can be done using standard techniques (such as the using the left-Kan extension along <span class="math notranslate nohighlight">\(\mathbb F\to\sf Set\)</span>).</p>
 <p>Conversely, given a monad <span class="math notranslate nohighlight">\(M:\sf Set\to Set\)</span>, <span class="math notranslate nohighlight">\(\mathcal L(n,1)=Mn\)</span> defines a Lawvere theory.</p>
-</section>
-<section id="from-universal-algebra-to-monads-and-back">
-<h3>From Universal Algebra to Monads and back<a class="headerlink" href="#from-universal-algebra-to-monads-and-back" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="universal-algebra-and-monads">
+<h3>Universal Algebra and Monads<a class="headerlink" href="#universal-algebra-and-monads" title="Permalink to this heading">#</a></h3>
 <p>Given a variety <span class="math notranslate nohighlight">\(F\dashv U:\cal A\to\sf Set\)</span>, <span class="math notranslate nohighlight">\(M=UF\)</span> defines a monad.</p>
 <p>Conversely, given a monad <span class="math notranslate nohighlight">\(M\)</span> one takes the elements of <span class="math notranslate nohighlight">\(Mn\)</span> as the fundamental operations and the kernel of the multiplications <span class="math notranslate nohighlight">\(\mu_n:MMn\to Mn\)</span> as the equations.</p>
 <hr class="footnotes docutils" />
-<aside class="footnote brackets" id="n" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>Our notation identifies a natural number <span class="math notranslate nohighlight">\(n\)</span> with their cardinals <span class="math notranslate nohighlight">\(\{0,\dots n-1\}\)</span>.</p>
-</aside>
-<aside class="footnote brackets" id="inducedmonad" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
-<p>We also need to define the unit <span class="math notranslate nohighlight">\(\eta\)</span> which is the unit of the adjunction and the multiplication <span class="math notranslate nohighlight">\(\mu\)</span> which is <span class="math notranslate nohighlight">\(U\varepsilon F\)</span> where <span class="math notranslate nohighlight">\(\varepsilon\)</span> is the counit of the adjunction. In the case that <span class="math notranslate nohighlight">\(\cal A\)</span> is a variety, the unit maps a variable <span class="math notranslate nohighlight">\(x\)</span> to the term <span class="math notranslate nohighlight">\(x\)</span> and the multiplication <span class="math notranslate nohighlight">\(\mu_X:UFUFX\to UFX\)</span> maps <span class="math notranslate nohighlight">\(t(t_1,\ldots t_n) \in UFUFX\)</span> to <span class="math notranslate nohighlight">\(t(t_1,\ldots t_n) \in UFX\)</span>.</p>
-</aside>
-<aside class="footnote brackets" id="mathbbf" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
-<p><span class="math notranslate nohighlight">\(\mathbb F\)</span> is the free category with finite coproducts on one generator. Dually, <span class="math notranslate nohighlight">\(\mathbb F^{op}\)</span> is the free category with finite products on one generator. For example, there are exactly <span class="math notranslate nohighlight">\(n\)</span> arrows <span class="math notranslate nohighlight">\(n\to 1\)</span> in <span class="math notranslate nohighlight">\(\mathbb F^{op}\)</span> and they corresponed to the <span class="math notranslate nohighlight">\(n\)</span> projections from the <span class="math notranslate nohighlight">\(n\)</span>th power. In detail, given a set <span class="math notranslate nohighlight">\(A\)</span> and an element in <span class="math notranslate nohighlight">\(A^n\)</span>, that is, a function <span class="math notranslate nohighlight">\(n\to A\)</span> as well as an arrow <span class="math notranslate nohighlight">\(1\to n\)</span>, precomposing <span class="math notranslate nohighlight">\(n\to A\)</span> with <span class="math notranslate nohighlight">\(1\to n\)</span> is projection on to the coordinate selected by <span class="math notranslate nohighlight">\(1\to n\)</span>.</p>
-</aside>
-</section>
-</section>
-</section>
+<dl class="footnote brackets">
+<dt class="label" id="n"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Our notation identifies a natural number <span class="math notranslate nohighlight">\(n\)</span> with their cardinals <span class="math notranslate nohighlight">\(\{0,\dots n-1\}\)</span>.</p>
+</dd>
+<dt class="label" id="inducedmonad"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>We also need to define the unit <span class="math notranslate nohighlight">\(\eta\)</span> which is the unit of the adjunction and the multiplication <span class="math notranslate nohighlight">\(\mu\)</span> which is <span class="math notranslate nohighlight">\(U\varepsilon F\)</span> where <span class="math notranslate nohighlight">\(\varepsilon\)</span> is the counit of the adjunction. In the case that <span class="math notranslate nohighlight">\(\cal A\)</span> is a variety, the unit maps a variable <span class="math notranslate nohighlight">\(x\)</span> to the term <span class="math notranslate nohighlight">\(x\)</span> and the multiplication <span class="math notranslate nohighlight">\(\mu_X:UFUFX\to UFX\)</span> maps <span class="math notranslate nohighlight">\(t(t_1,\ldots t_n) \in UFUFX\)</span> to <span class="math notranslate nohighlight">\(t(t_1,\ldots t_n) \in UFX\)</span>.</p>
+</dd>
+<dt class="label" id="mathbbf"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p><span class="math notranslate nohighlight">\(\mathbb F\)</span> is the free category with finite coproducts on one generator. Dually, <span class="math notranslate nohighlight">\(\mathbb F^{op}\)</span> is the free category with finite products on one generator. For example, there are exactly <span class="math notranslate nohighlight">\(n\)</span> arrows <span class="math notranslate nohighlight">\(n\to 1\)</span> in <span class="math notranslate nohighlight">\(\mathbb F^{op}\)</span> and they corresponed to the <span class="math notranslate nohighlight">\(n\)</span> projections from the <span class="math notranslate nohighlight">\(n\)</span>th power. In detail, given a set <span class="math notranslate nohighlight">\(A\)</span> and an element in <span class="math notranslate nohighlight">\(A^n\)</span>, that is, a function <span class="math notranslate nohighlight">\(n\to A\)</span> as well as an arrow <span class="math notranslate nohighlight">\(1\to n\)</span>, precomposing <span class="math notranslate nohighlight">\(n\to A\)</span> with <span class="math notranslate nohighlight">\(1\to n\)</span> is projection on to the coordinate selected by <span class="math notranslate nohighlight">\(1\to n\)</span>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -486,9 +484,9 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-and-forth-between-the-definitions">Back and Forth Between The Definitions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-universal-algebras-to-lawvere-theories-and-back">From Universal Algebras to Lawvere Theories and back</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-lawvere-theories-to-monads-and-back">From Lawvere Theories to Monads and back</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-universal-algebra-to-monads-and-back">From Universal Algebra to Monads and back</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-algebra-and-lawvere-theories">Universal Algebra and Lawvere Theories</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lawvere-theories-and-monads">Lawvere Theories and Monads</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-algebra-and-monads">Universal Algebra and Monads</a></li>
 </ul>
 </li>
 </ul>
