@@ -153,13 +153,14 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 0</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="yoneda.html">The Yoneda Embedding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="full-or-faithful-adjoints.html">Full or Faithful Adjoints</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Morita Equivalence</span></p>
 <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro-morita.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="regular-and-exact-categories.html">Regular and Exact Categories</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Lawvere’s Characterization of Varieties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="clones.html">Clones, Monads, Lawvere Theories</a></li>
@@ -406,7 +407,7 @@ document.write(`
 \[\mathcal C(A+A,C)\cong Set(2,\mathcal C(A,C)).\]</div>
 <p>More generally, we will write <span class="math notranslate nohighlight">\(X\bullet A\)</span> for the <span class="math notranslate nohighlight">\(n\)</span>-fold coproduct of <span class="math notranslate nohighlight">\(A\)</span>. It is called the tensor or copower and defined by an equation similarly to the one above, replacing <span class="math notranslate nohighlight">\(2\)</span> by <span class="math notranslate nohighlight">\(X\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-copower">
-<span class="eqno">(4)<a class="headerlink" href="#equation-copower" title="Permalink to this equation">#</a></span>\[\mathcal C(X\bullet A,C)\cong Set(X,\mathcal C(A,C)).\]</div>
+<span class="eqno">(6)<a class="headerlink" href="#equation-copower" title="Permalink to this equation">#</a></span>\[\mathcal C(X\bullet A,C)\cong Set(X,\mathcal C(A,C)).\]</div>
 </div>
 <div class="section" id="projective-objects">
 <h2>Projective Objects<a class="headerlink" href="#projective-objects" title="Permalink to this heading">#</a></h2>
@@ -453,7 +454,7 @@ document.write(`
 \[FUA\cong F(UA\bullet 1) \cong UA\bullet F1\]</div>
 <p>because <span class="math notranslate nohighlight">\(\bullet\)</span> is a colimit <a class="footnote-reference brackets" href="#copower" id="id6">6</a> and <span class="math notranslate nohighlight">\(F\)</span> (being a left adjoint) preserves colimits.</p>
 <p><strong>Definition:</strong> A regular category <span class="math notranslate nohighlight">\(\mathcal C\)</span> has <strong>generator</strong> <span class="math notranslate nohighlight">\(G\)</span> if for all objects <span class="math notranslate nohighlight">\(C\)</span> there is a set <span class="math notranslate nohighlight">\(X\)</span> and a regular epi <span class="math notranslate nohighlight">\(X\bullet G\to C\)</span>. If <span class="math notranslate nohighlight">\(G\)</span> is also projective, it is called a <strong>projective generator</strong>.</p>
-<p><strong>Remark:</strong> We will use below that the definition <a class="reference internal" href="#equation-copower">(4)</a> of the copower <span class="math notranslate nohighlight">\(\bullet\)</span>, written as an implicit definition in the form of the equation</p>
+<p><strong>Remark:</strong> We will use below that the definition <a class="reference internal" href="#equation-copower">(6)</a> of the copower <span class="math notranslate nohighlight">\(\bullet\)</span>, written as an implicit definition in the form of the equation</p>
 <div class="math notranslate nohighlight">
 \[\mathcal C(X\bullet G,C)\cong Set(X,\mathcal C(G,C)),\]</div>
 <p>is exactly saying that <span class="math notranslate nohighlight">\(-\bullet G\)</span>  is left adjoint to <span class="math notranslate nohighlight">\(\mathcal C(G,-)\)</span>.</p>
@@ -508,10 +509,10 @@ document.write(`
 <ul class="simple">
 <li><p>https://ncatlab.org/nlab/show/projective+object</p></li>
 </ul>
-<p><span id="id10">[<a class="reference internal" href="../intro.html#id18" title="Alexander Kurz and J. Velebil. Quasivarieties and varieties of ordered algebras: regularity and exactness. Math. Struct. Comput. Sci., 27(7):1153–1194, 2017. URL: https://alexhkurz.github.io/papers/Ordered-algebras.pdf.">Kurz and Velebil, 2017</a>]</span></p>
-<p><span id="id11">[<a class="reference internal" href="../intro.html#id15" title="Stephen L. Bloom and Jesse B. Wright. P-varieties - a signature independent characterization of varieties of ordered algebras. Journal of Pure and Applied Algebra, 29(1):13-58, 1983. URL: https://doi.org/10.1016/0022-4049(83)90080-4.">Bloom and Wright, 1983</a>]</span>
+<p><span id="id10">[<a class="reference internal" href="../intro.html#id19" title="Alexander Kurz and J. Velebil. Quasivarieties and varieties of ordered algebras: regularity and exactness. Math. Struct. Comput. Sci., 27(7):1153–1194, 2017. URL: https://alexhkurz.github.io/papers/Ordered-algebras.pdf.">Kurz and Velebil, 2017</a>]</span></p>
+<p><span id="id11">[<a class="reference internal" href="../intro.html#id16" title="Stephen L. Bloom and Jesse B. Wright. P-varieties - a signature independent characterization of varieties of ordered algebras. Journal of Pure and Applied Algebra, 29(1):13-58, 1983. URL: https://doi.org/10.1016/0022-4049(83)90080-4.">Bloom and Wright, 1983</a>]</span>
 <span id="id12">[]</span>
-<span id="id13">[<a class="reference internal" href="../intro.html#id17" title="Stephen L. Bloom. Varieties of ordered algebras. J. Comput. Syst. Sci., 13(2):200–212, 1976. URL: https://doi.org/10.1016/S0022-0000(76)80030-X.">Bloom, 1976</a>]</span></p>
+<span id="id13">[<a class="reference internal" href="../intro.html#id18" title="Stephen L. Bloom. Varieties of ordered algebras. J. Comput. Syst. Sci., 13(2):200–212, 1976. URL: https://doi.org/10.1016/S0022-0000(76)80030-X.">Bloom, 1976</a>]</span></p>
 </div>
 <div class="section" id="diagrams">
 <h2>Diagrams<a class="headerlink" href="#diagrams" title="Permalink to this heading">#</a></h2>
@@ -534,7 +535,7 @@ document.write(`
 <dd><p>See <a class="reference external" href="https://ncatlab.org/nlab/show/split+coequalizer#examples">nLab#split coequalizer#Examples</a> for details.</p>
 </dd>
 <dt class="label" id="copower"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
-<dd><p>See <a class="reference internal" href="#equation-copower">(4)</a> and <a class="reference external" href="https://ncatlab.org/nlab/show/copower">nLab#copower</a>.</p>
+<dd><p>See <a class="reference internal" href="#equation-copower">(6)</a> and <a class="reference external" href="https://ncatlab.org/nlab/show/copower">nLab#copower</a>.</p>
 </dd>
 <dt class="label" id="fdashvu"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
 <dd><p>This is a pattern that repeats itself in many different places in category theory. It is worth spending some time meditating over it. Also recall the Preliminary Exercise from above.</p>

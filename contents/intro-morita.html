@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Regular and Exact Categories &#8212; Topics in Category Theory</title>
+    <title>Introduction &#8212; Topics in Category Theory</title>
   
   
   
@@ -64,11 +64,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/regular-and-exact-categories';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/intro-morita';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Lawvere’s Characterization of Varieties" href="lawveres-characterization-of-varieties.html" />
-    <link rel="prev" title="Introduction" href="intro-morita.html" />
+    <link rel="next" title="Regular and Exact Categories" href="regular-and-exact-categories.html" />
+    <link rel="prev" title="Full or Faithful Adjoints" href="full-or-faithful-adjoints.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -160,8 +160,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Morita Equivalence</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="intro-morita.html">Introduction</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Regular and Exact Categories</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regular-and-exact-categories.html">Regular and Exact Categories</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lawveres-characterization-of-varieties.html">Lawvere’s Characterization of Varieties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="clones.html">Clones, Monads, Lawvere Theories</a></li>
 </ul>
@@ -235,7 +235,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/alexhkurz/topics-in-category-theory.git/issues/new?title=Issue%20on%20page%20%2Fcontents/regular-and-exact-categories.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/alexhkurz/topics-in-category-theory.git/issues/new?title=Issue%20on%20page%20%2Fcontents/intro-morita.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -265,7 +265,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/contents/regular-and-exact-categories.md" target="_blank"
+      <li><a href="../_sources/contents/intro-morita.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -347,7 +347,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Regular and Exact Categories</h1>
+    <h1>Introduction</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -357,12 +357,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relations">Relations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exact-categories">Exact Categories</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix">Appendix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sets-and-rectangular-bands-with-involution">Sets and Rectangular Bands with Involution</a></li>
 </ul>
             </nav>
         </div>
@@ -374,116 +369,41 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="regular-and-exact-categories">
-<h1>Regular and Exact Categories<a class="headerlink" href="#regular-and-exact-categories" title="Permalink to this heading">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
 <p>(under construction)</p>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
-<p>Regular categories</p>
+<p>In very general terms, two theories (formalized as categories) are Morita equivalent if their categories of models are equivalent.</p>
 <ul class="simple">
-<li><p>are a generalisation of abelian categories and ordinary categories of algebras;</p></li>
-<li><p>have a good notion of image factorisation;</p></li>
-<li><p>give rise to categories of relations. <a class="footnote-reference brackets" href="#id5" id="id1">1</a></p></li>
+<li><p>The question posed by Morita was when two rings induce equivalent categories of modules. For example, any ring <span class="math notranslate nohighlight">\(R\)</span> is Morita equivalent to the ring of
+<span class="math notranslate nohighlight">\(n\times n\)</span> matrices with elements from <span class="math notranslate nohighlight">\(R\)</span>. We will see variations of this result below.</p></li>
+<li><p>Presheaf categories <span class="math notranslate nohighlight">\([\mathcal C^{op},\sf Set]\)</span> and  <span class="math notranslate nohighlight">\([\mathcal D^{op},\sf Set]\)</span> are equivalent iff the closure under retracts of <span class="math notranslate nohighlight">\(\mathcal C\)</span> and of <span class="math notranslate nohighlight">\(\mathcal D\)</span> are equivalent. This closure is known as the Karoubi envelope, or also as closure under splitting of idempotents, a terminology that will be explained below.</p></li>
+<li><p>In the following, we will be mainly interested in the question when two algebraic theories give rise to equivalent categories (varieties) of algebras.</p></li>
 </ul>
-<p>For a rough comparison, we can look at</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-center head"><p>general categories</p></th>
-<th class="text-center head"><p>categories with free algebras</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-center"><p>regular</p></td>
-<td class="text-center"><p>quasi-variety</p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p>exact</p></td>
-<td class="text-center"><p>variety</p></td>
-</tr>
-</tbody>
-</table>
-<p>Below the horizontal dividing line we add “closure under quotients”, on the right-hand side of the vertical dividing line we add finitely generated free algebras (for more on the latter see the next section on Lawvere’s characterization theorem of varieties).</p>
-</div>
-<div class="section" id="definitions">
-<h2>Definitions<a class="headerlink" href="#definitions" title="Permalink to this heading">#</a></h2>
-<p>An arrow that arises as a coequalizer is called  a <strong>regular epi</strong>.</p>
-<p><strong>Definition:</strong> A <a class="reference external" href="https://ncatlab.org/nlab/show/regular+category#definition">regular category</a> has finite limits and coequalizers and regular epis are stable under pullbacks.</p>
-<p><strong>Examples:</strong></p>
+<p>To see why Morita equivalence of varieties is interesting let us look at some examples.</p>
+<div class="section" id="sets-and-rectangular-bands-with-involution">
+<h2>Sets and Rectangular Bands with Involution<a class="headerlink" href="#sets-and-rectangular-bands-with-involution" title="Permalink to this heading">#</a></h2>
+<p>This is Example 2 in <span id="id1">[<a class="reference internal" href="../intro.html#id7" title="Ralph McKenzie. An algebraic version of categorical equivalence for varieties and more general algebraic categories. Logic and Algebra, 1996.">McKenzie, 1996</a>]</span>.</p>
+<p>The category <span class="math notranslate nohighlight">\(\sf Set\)</span> is equivalent the category of <span class="math notranslate nohighlight">\(\cal W\)</span> of “rectangular bands with involution”, that is, to the category of algebras <span class="math notranslate nohighlight">\(B\)</span> with a unary operation <span class="math notranslate nohighlight">\(s\)</span> and a binary operation <span class="math notranslate nohighlight">\(\cdot\)</span> satisfying</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f3a8d2e8-40e8-494e-a6ee-b2f46af43631">
+<span class="eqno">(4)<a class="headerlink" href="#equation-f3a8d2e8-40e8-494e-a6ee-b2f46af43631" title="Permalink to this equation">#</a></span>\[\begin{gather}
+x\cdot (y\cdot z) = (x\cdot y)\cdot z\\
+x\cdot y \cdot z = x\cdot z\\
+x\cdot x = x\\
+s(s(x)) = x
+\end{gather}\]</div>
+<p>To interpret the equations one can think of elements <span class="math notranslate nohighlight">\(x\)</span> as pairs <span class="math notranslate nohighlight">\((a,b)\)</span> and <span class="math notranslate nohighlight">\((a,b) \cdot (c,d)=(a,d)\)</span> and <span class="math notranslate nohighlight">\(s(a,b)=(b,a)\)</span>.</p>
+<p><strong>Exercise:</strong> Show that (with <span class="math notranslate nohighlight">\(s\)</span> and <span class="math notranslate nohighlight">\(\cdot\)</span> defined as indicated above) the operation <span class="math notranslate nohighlight">\(H\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-f948ca80-9e62-4852-81ac-9e4440b92dbc">
+<span class="eqno">(5)<a class="headerlink" href="#equation-f948ca80-9e62-4852-81ac-9e4440b92dbc" title="Permalink to this equation">#</a></span>\[\begin{align}
+{\sf Set} &amp; \stackrel H ⟶ \cal W\\
+A &amp; \ \mapsto \ (A^2,s,\cdot)
+\end{align}\]</div>
+<p>is an equivalence of categories:</p>
 <ul class="simple">
-<li><p>Varities and quasi-varities in the sense of universal algebra are regular categories.</p></li>
-<li><p>The category of posets (and many other categories of topological spaces) are not regular because regular epis are not stable under pullbacks.</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(\mathcal B\)</span> is regular than the category of functors <span class="math notranslate nohighlight">\([\mathcal A,\mathcal B]\)</span> is regular. In particular, presheaf categories are regular.</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(\mathcal A\)</span> is regular than the slice category <span class="math notranslate nohighlight">\(\mathcal A/A\)</span> is regular.</p></li>
+<li><p><span class="math notranslate nohighlight">\(H\)</span> is a functor.</p></li>
+<li><p><span class="math notranslate nohighlight">\(H\)</span> is essentially surjective.</p></li>
+<li><p><span class="math notranslate nohighlight">\(H\)</span> is full and faithful.</p></li>
 </ul>
-<p><strong>Exercises:</strong></p>
-<ul class="simple">
-<li><p>Every regular epi is an epi.</p></li>
-<li><p>If a regular epimorphism has a kernel pair, it is the coequalizer of that kernel pair.</p></li>
-<li><p>If a kernel pair has a coequalizer, it is the kernel pair of that regular epimorphism.</p></li>
-<li><p>Find a pullback <span class="math notranslate nohighlight">\((p,q)\)</span> of <span class="math notranslate nohighlight">\((j,k)\)</span> in the category of posets where <span class="math notranslate nohighlight">\(k\)</span> is a regular epi but <span class="math notranslate nohighlight">\(p\)</span> is not.</p></li>
-</ul>
-<p><strong>Exercises</strong>:</p>
-<ul class="simple">
-<li><p>(Epis don’t need to be surjective.) In the category of monoids, the inclusion <span class="math notranslate nohighlight">\((\mathbb N,0,+)\to (\mathbb Z,0,+)\)</span> is epi but not regular epi.</p></li>
-<li><p>In a regular category, every morphism factors as a regular epi followed by a mono.<a class="footnote-reference brackets" href="#factorization" id="id2">2</a></p></li>
-<li><p>In a regular category, the composition of regular epis is regular.<a class="footnote-reference brackets" href="#compregepi" id="id3">3</a></p></li>
-</ul>
-<p><strong>Remark:</strong> There are various other strengthenings of the notion of epi (which we will not need in the following), such as extremal epis and strong epis. In regular categories, strong epis and regular epis coincide. This is a step we will skip, but is useful to know, because strong epis are closed under composition but regular epis in general are not.</p>
-<p>Let us recall from the exercises:</p>
-<p><strong>Fact:</strong> In a regular category every arrow can be factored into a regular epi followed by a mono.</p>
-</div>
-<div class="section" id="relations">
-<h2>Relations<a class="headerlink" href="#relations" title="Permalink to this heading">#</a></h2>
-<p>In any category <span class="math notranslate nohighlight">\(\mathcal C\)</span>, one can define a relation <span class="math notranslate nohighlight">\(R:A\to B\)</span> as a monomorphic span. If <span class="math notranslate nohighlight">\(\mathcal C\)</span> is regular, then one defines composition of relation via pullback and image factorisation. Moreover, due to regular epis being stable under pullbacks, the composition of relations is associative.</p>
-<p>To summarize, for every regular category <span class="math notranslate nohighlight">\(\mathcal C\)</span> there is the category of relations</p>
-<div class="math notranslate nohighlight">
-\[\sf Rel\mathcal C.\]</div>
-<p><strong>Exercise:</strong> Define reflexive, symmetric, and transitive relations in <span class="math notranslate nohighlight">\(\mathcal C\)</span>.</p>
-<p><strong>Theorem:</strong> The Yoneda embedding <span class="math notranslate nohighlight">\(\mathcal C\to [\mathcal C^{op},Set]\)</span> … …</p>
-</div>
-<div class="section" id="exact-categories">
-<h2>Exact Categories<a class="headerlink" href="#exact-categories" title="Permalink to this heading">#</a></h2>
-<p>Early category was mostly category theory enriched over abelian groups (additive categories) and much of the category theory we know today was developed as a generalisation of the additive case. This is explicit in the original paper on exact categories:</p>
-<p><img alt="" src="https://hackmd.io/_uploads/B1gY7pTH2.png" /></p>
-<p><strong>Definition:</strong> A regular category is <strong>exact</strong> if it has effective equivalence relations, that is, every equivalence relation is the kernel pair of its coequaliser. A functor is <em>exact</em> if it preserves finite limits and regular epis.</p>
-<p><strong>Example:</strong> We have already seen that quasi-varieties are regular. Quasi-varieties are typically not exact, but varieties are. In fact, it is not hard to see how effective equivalence relations corresponds to closure under homomorphic images.</p>
-<p><strong>Example:</strong> If <span class="math notranslate nohighlight">\(\mathcal C\)</span> is regular, then the Yoneda embedding <span class="math notranslate nohighlight">\(\mathcal C\to [\mathcal C^{op},Set]\)</span> is exact.</p>
-<p>This means that one can transfer the usual set-theoretic proofs of properties of relations to all regular categories.</p>
-<!-->
-</div>
-<div class="section" id="appendix">
-<h2>Appendix<a class="headerlink" href="#appendix" title="Permalink to this heading">#</a></h2>
-<p>An alternative definition of regular categories goes as follows.</p>
-<p>A regular category has finite limits. Monos form the right-hand side of a factorisation system <span class="math notranslate nohighlight">\((\cal E,M)\)</span>. The arrows in <span class="math notranslate nohighlight">\(\cal E\)</span> are exactly the coequalizers and are stable under pullbacks.</p>
-<p>Actually, this second definition is not equivalent to the first, because our first definition required the existence of coequalizers (which we need in the end because (quasi)varieties have all colimits) while, in general, regular categories do not need to have all coequalizers.
-&lt;–&gt;</p>
-</div>
-<div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<p>For a textbook account on regular and exact categories see</p>
-<ul class="simple">
-<li><p>Borceux, Handbook of Categorical Algebra, Volume 2, 1994.</p></li>
-</ul>
-<p>I also recommend the section on metatheorems in the introduction of</p>
-<ul class="simple">
-<li><p>Borceux, Bourn, <em>Mal’cev, protomodular, homological and semi-abelian categories</em>, 2004.</p></li>
-</ul>
-<p>nLab has all definitions I skipped and also valuable further information.</p>
-<ul class="simple">
-<li><p>https://ncatlab.org/nlab/show/regular+category</p></li>
-<li><p><span id="id4">[<a class="reference internal" href="../intro.html#id314" title="G. Kelly and J. Power. Adjunctions whose counits are coequalizers and presentations of enriched monads. J.Pure Appl. Algebra, 1993. URL: https://www.sciencedirect.com/science/article/pii/0022404993900928/pdf.">Kelly and Power, 1993</a>]</span></p></li>
-</ul>
-<hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Why is it that the notion of a category is general enough to accommodate relations as arrows but then every introduction to category theory quickly abandons the example of relations and focuses on examples in which arrows are functions? One reason is that categories of relations are typically not closed under limits and colimits. A move that often works is the following. Regular categories are very common and they give rise to categories of relations with good properties, which are often best studied as so-called double categories in which “relational” arrows and “functional” arrows exist together.</p>
-</dd>
-<dt class="label" id="factorization"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>To factorize <span class="math notranslate nohighlight">\(f\)</span>, we observe that the coequalizer <span class="math notranslate nohighlight">\(e\)</span> of the kernel pair of <span class="math notranslate nohighlight">\(f\)</span> is a regular epi. The universal property of a coequalizer allows us to factor <span class="math notranslate nohighlight">\(f=m\circ e\)</span>. We want to show that <span class="math notranslate nohighlight">\(m\)</span> is mono. This needs two lemmas. First, that an arrow is mono iff the two legs of its kernel pair are equal. Second, that “pulling <span class="math notranslate nohighlight">\(e\)</span> back along the kernel pairs of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(m\)</span>” (it needs to be made precise what that means) results in an epi.</p>
-</dd>
-<dt class="label" id="compregepi"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>This needs some work. One can show that, in a regular category, regular epis and strong epis coincide and then use that strong epis are closed under composition.</p>
-</dd>
-</dl>
 </div>
 </div>
 
@@ -519,20 +439,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro-morita.html"
+       href="full-or-faithful-adjoints.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction</p>
+        <p class="prev-next-title">Full or Faithful Adjoints</p>
       </div>
     </a>
     <a class="right-next"
-       href="lawveres-characterization-of-varieties.html"
+       href="regular-and-exact-categories.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lawvere’s Characterization of Varieties</p>
+        <p class="prev-next-title">Regular and Exact Categories</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -554,12 +474,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relations">Relations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exact-categories">Exact Categories</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix">Appendix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sets-and-rectangular-bands-with-involution">Sets and Rectangular Bands with Involution</a></li>
 </ul>
   </nav></div>
 
