@@ -383,19 +383,24 @@ document.write(`
 <div class="section" id="sets-and-rectangular-bands-with-involution">
 <h2>Sets and Rectangular Bands with Involution<a class="headerlink" href="#sets-and-rectangular-bands-with-involution" title="Permalink to this heading">#</a></h2>
 <p>This is Example 2 in <span id="id1">[<a class="reference internal" href="../intro.html#id7" title="Ralph McKenzie. An algebraic version of categorical equivalence for varieties and more general algebraic categories. Logic and Algebra, 1996.">McKenzie, 1996</a>]</span>.</p>
-<p>The category <span class="math notranslate nohighlight">\(\sf Set\)</span> is equivalent the category of <span class="math notranslate nohighlight">\(\cal W\)</span> of “rectangular bands with involution”, that is, to the category of algebras <span class="math notranslate nohighlight">\(B\)</span> with a unary operation <span class="math notranslate nohighlight">\(s\)</span> and a binary operation <span class="math notranslate nohighlight">\(\cdot\)</span> satisfying</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f3a8d2e8-40e8-494e-a6ee-b2f46af43631">
-<span class="eqno">(4)<a class="headerlink" href="#equation-f3a8d2e8-40e8-494e-a6ee-b2f46af43631" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<p>The category <span class="math notranslate nohighlight">\(\sf Set\)</span> is equivalent to the category <span class="math notranslate nohighlight">\(\sf RBI\)</span> of “rectangular bands with involution”, that is, to the category of algebras <span class="math notranslate nohighlight">\(B\)</span> with a unary operation <span class="math notranslate nohighlight">\(s\)</span> and a binary operation <span class="math notranslate nohighlight">\(\cdot\)</span> satisfying</p>
+<div class="amsmath math notranslate nohighlight" id="equation-21e44e28-2774-42db-8a14-94083387aa54">
+<span class="eqno">(4)<a class="headerlink" href="#equation-21e44e28-2774-42db-8a14-94083387aa54" title="Permalink to this equation">#</a></span>\[\begin{gather}
 x\cdot (y\cdot z) = (x\cdot y)\cdot z\\
 x\cdot y \cdot z = x\cdot z\\
 x\cdot x = x\\
 s(s(x)) = x
 \end{gather}\]</div>
-<p>To interpret the equations one can think of elements <span class="math notranslate nohighlight">\(x\)</span> as pairs <span class="math notranslate nohighlight">\((a,b)\)</span> and <span class="math notranslate nohighlight">\((a,b) \cdot (c,d)=(a,d)\)</span> and <span class="math notranslate nohighlight">\(s(a,b)=(b,a)\)</span>.</p>
-<p><strong>Exercise:</strong> Show that (with <span class="math notranslate nohighlight">\(s\)</span> and <span class="math notranslate nohighlight">\(\cdot\)</span> defined as indicated above) the operation <span class="math notranslate nohighlight">\(H\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-f948ca80-9e62-4852-81ac-9e4440b92dbc">
-<span class="eqno">(5)<a class="headerlink" href="#equation-f948ca80-9e62-4852-81ac-9e4440b92dbc" title="Permalink to this equation">#</a></span>\[\begin{align}
-{\sf Set} &amp; \stackrel H ⟶ \cal W\\
+<p><strong>Remark:</strong> To interpret the equations one can think of elements <span class="math notranslate nohighlight">\(x\)</span> as pairs <span class="math notranslate nohighlight">\((a,b)\)</span> with operations defined by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7208de6c-3fa8-45b0-bad4-f458450a042a">
+<span class="eqno">(5)<a class="headerlink" href="#equation-7208de6c-3fa8-45b0-bad4-f458450a042a" title="Permalink to this equation">#</a></span>\[\begin{gather}
+(a,b) \cdot (c,d)=(a,d)\\
+s(a,b)=(b,a)
+\end{gather}\]</div>
+<p><strong>Exercise:</strong> Show that (with <span class="math notranslate nohighlight">\(s\)</span> and <span class="math notranslate nohighlight">\(\cdot\)</span> defined as in the remark above) the operation <span class="math notranslate nohighlight">\(H\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-30b4056a-cc03-4881-8883-16d8aae94b80">
+<span class="eqno">(6)<a class="headerlink" href="#equation-30b4056a-cc03-4881-8883-16d8aae94b80" title="Permalink to this equation">#</a></span>\[\begin{align}
+{\sf Set} &amp; \stackrel H ⟶ \sf RBI\\
 A &amp; \ \mapsto \ (A^2,s,\cdot)
 \end{align}\]</div>
 <p>is an equivalence of categories:</p>
@@ -404,6 +409,24 @@ A &amp; \ \mapsto \ (A^2,s,\cdot)
 <li><p><span class="math notranslate nohighlight">\(H\)</span> is essentially surjective.</p></li>
 <li><p><span class="math notranslate nohighlight">\(H\)</span> is full and faithful.</p></li>
 </ul>
+<p><strong>Remark/Question:</strong> The category <span class="math notranslate nohighlight">\(\sf Set\)</span> can be seen as a category of algebras defined by no operations and no equations. As we have seen <span class="math notranslate nohighlight">\(\sf Set\)</span> is equivalent to the category of rectangular bands with involution defined by a much more sophisticated algebraic theory. Is there a general theory that explains which algebraic theories give rise to equivalent categories of algebras? Conversely, given a category of algebras, can we classify the algebraic theories that give rise to equivalent categories of algebras?</p>
+<p>The proof of the previous exercise can be decomposed into two steps. Instead of doing <span class="math notranslate nohighlight">\(\sf Set \to RBI\)</span> in one go we want to introduce an intermediate step <span class="math notranslate nohighlight">\(\sf Set \to Set^{[2]}\to RBI\)</span>. The reason to do this is that the first step will turn out to be a general method, while the second step will contain the reasoning particular to the situation at hand.</p>
+<p><strong>Exercise:</strong> The category <span class="math notranslate nohighlight">\(\sf Set^{[2]}\)</span> has as objects sets <span class="math notranslate nohighlight">\(A^2=A\times A = \{(a,b) \mid a,b \in A\}\)</span> with operations formed from projections <span class="math notranslate nohighlight">\(p^n_i:A^n\to A\)</span>, <span class="math notranslate nohighlight">\(p^n_i(x_1,\ldots x_n)=x_i\)</span>.</p>
+<ul>
+<li><p>List the four operation <span class="math notranslate nohighlight">\(A^2\to A^2\)</span>, which we will call <span class="math notranslate nohighlight">\(id\)</span>, <span class="math notranslate nohighlight">\(l\)</span> (for left), <span class="math notranslate nohighlight">\(r\)</span> (for right), <span class="math notranslate nohighlight">\(s\)</span> (for swap).</p></li>
+<li><p>Define an operation <span class="math notranslate nohighlight">\(\cdot\)</span> of type <span class="math notranslate nohighlight">\((A^2)^2 \to A^2\)</span> such that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4b492490-5536-4822-b732-45b9363da333">
+<span class="eqno">(7)<a class="headerlink" href="#equation-4b492490-5536-4822-b732-45b9363da333" title="Permalink to this equation">#</a></span>\[\begin{gather}
+    x\cdot (y\cdot z) = (x\cdot y)\cdot z\\
+    x\cdot y \cdot z = x\cdot z\\
+    x\cdot x = x
+    \end{gather}\]</div>
+</li>
+<li><p>Define <span class="math notranslate nohighlight">\(l\)</span> and <span class="math notranslate nohighlight">\(r\)</span> using <span class="math notranslate nohighlight">\(s\)</span> and <span class="math notranslate nohighlight">\(\cdot\)</span>.</p></li>
+<li><p>Show that a morphism <span class="math notranslate nohighlight">\(A^2\to B^2\)</span> compatible with projections must be of the form <span class="math notranslate nohighlight">\(f\times f\)</span> with <span class="math notranslate nohighlight">\(f:A\to B\)</span>.</p></li>
+<li><p>Show that the obvious functor <span class="math notranslate nohighlight">\(\sf Set\to Set^{[n]}\)</span> is an equivalence of categories.</p></li>
+</ul>
+<p>(to be continued)</p>
 </div>
 </div>
 
