@@ -18,3 +18,28 @@ This makes the [book available online](https://alexhkurz.github.io/topics-in-cat
 
 If the table of contents in the left-hand pane behaves in a strange way, clean out `_build` by running `jb clean .`
 
+## References
+
+
+- [Create your first book](https://jupyterbook.org/en/stable/start/your-first-book.html).
+- [Math and equations](https://jupyterbook.org/en/stable/content/math.html#math-and-equations).
+- [.gitignore](https://raw.githubusercontent.com/executablebooks/jupyter-book/master/.gitignore).
+- [Publish your book online](https://jupyterbook.org/en/stable/start/publish.html).
+
+
+## Questions
+
+Is it possible to combine jupyter-book with tikzcd? Or other packages to draw diagrams?
+
+https://github.com/kisonecat/tikzjax
+
+<head>
+<link rel="stylesheet" type="text/css" href="http://tikzjax.com/v1/fonts.css">
+<script src="http://tikzjax.com/v1/tikzjax.js"></script>
+</head>
+
+<script type="text/tikz">
+  \begin{tikzpicture}
+    \draw (0,0) circle (1in);
+  \end{tikzpicture}
+</script>

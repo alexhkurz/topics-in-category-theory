@@ -6,10 +6,13 @@ format: jb-book
 root: intro.md
 
 parts:
-- caption: Part 1
+- caption: "Appendix"
   chapters:
+  - file: contents/yoneda.md
+  - file: contents/full-or-faithful-adjoints.md
+- caption: Morita Equivalence
+  chapters:
+  - file: contents/intro-morita.md
   - file: contents/regular-and-exact-categories.md
   - file: contents/lawveres-characterization-of-varieties.md
-- caption: Appendices
-  chapters:
-  - file: contents/category-theory-via-equations.md
+  - file: contents/clones.md

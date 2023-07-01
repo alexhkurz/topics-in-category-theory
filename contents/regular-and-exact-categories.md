@@ -7,10 +7,10 @@
 Regular categories
 
 - are a generalisation of abelian categories and ordinary categories of algebras;
--  have a good notion of image factorisation;
--  gives rise to a categories of relations. [^relations]
+- have a good notion of image factorisation;
+- give rise to categories of relations. [^relations]
  
-[^relations]: Why is it that the notion of a category is general enough to accommodate relations as arrows but then every introduction to category theory quickly abandons the example of relations and focusses on examples in which arrows are functions? One reason is that categories of relations are typically not closed under limits and colimits. A move that often works is the following. Regular categories are very common and they give rise to categories of relations with good properties, which are often best studied as so-called double categories in which "relational" arrows and "functional" arrows exist together.
+[^relations]: Why is it that the notion of a category is general enough to accommodate relations as arrows but then every introduction to category theory quickly abandons the example of relations and focuses on examples in which arrows are functions? One reason is that categories of relations are typically not closed under limits and colimits. A move that often works is the following. Regular categories are very common and they give rise to categories of relations with good properties, which are often best studied as so-called double categories in which "relational" arrows and "functional" arrows exist together.
 
 For a rough comparison, we can look at
 
@@ -19,11 +19,13 @@ For a rough comparison, we can look at
 |regular | quasi-variety |
 |exact | variety |
 
+Below the horizontal dividing line we add "closure under quotients", on the right-hand side of the vertical dividing line we add finitely generated free algebras (for more on the latter see the next section on Lawvere's characterization theorem of varieties).
+
 ## Definitions
 
 An arrow that arises as a coequalizer is called  a **regular epi**.
 
-**Definition:** A **regular category** has finite limits and coequalizers and regular epis are stable under pullbacks. 
+**Definition:** A [regular category](https://ncatlab.org/nlab/show/regular+category#definition) has finite limits and coequalizers and regular epis are stable under pullbacks. 
 
 **Examples:** 
 - Varities and quasi-varities in the sense of universal algebra are regular categories. 
@@ -38,11 +40,11 @@ An arrow that arises as a coequalizer is called  a **regular epi**.
 - Find a pullback $(p,q)$ of $(j,k)$ in the category of posets where $k$ is a regular epi but $p$ is not.
 
 **Exercises**:
-- In the category of monoids, the inclusion $(\mathbb N,0,+)\to (\mathbb Z,0,+)$ is epi but not regular epi.
+- (Epis don't need to be surjective.) In the category of monoids, the inclusion $(\mathbb N,0,+)\to (\mathbb Z,0,+)$ is epi but not regular epi.
 - In a regular category, every morphism factors as a regular epi followed by a mono.[^factorization]
 - In a regular category, the composition of regular epis is regular.[^compRegEpi]
 
-[^factorization]: To factorize $f$, we observe that the coequalizer $e$ of the kernel pair of $f$ is a regular epi. The universal property of a coequalizer allows us to factor $f=m\circ e$. We need to show that $m$ is mono. This needs a lemma, namely that an arrow is mono iff the two legs of its kernel pair are equal. 
+[^factorization]: To factorize $f$, we observe that the coequalizer $e$ of the kernel pair of $f$ is a regular epi. The universal property of a coequalizer allows us to factor $f=m\circ e$. We want to show that $m$ is mono. This needs two lemmas. First, that an arrow is mono iff the two legs of its kernel pair are equal. Second, that "pulling $e$ back along the kernel pairs of $f$ and $m$" (it needs to be made precise what that means) results in an epi.
 
 [^compRegEpi]: This needs some work. One can show that, in a regular category, regular epis and strong epis coincide and then use that strong epis are closed under composition.
 
@@ -80,6 +82,20 @@ Early category was mostly category theory enriched over abelian groups (additive
 
 This means that one can transfer the usual set-theoretic proofs of properties of relations to all regular categories.
 
+<!-->
+## Appendix
+
+An alternative definition of regular categories goes as follows.
+
+A regular category has finite limits. Monos form the right-hand side of a factorisation system $(\cal E,M)$. The arrows in $\cal E$ are exactly the coequalizers and are stable under pullbacks. 
+
+Actually, this second definition is not equivalent to the first, because our first definition required the existence of coequalizers (which we need in the end because (quasi)varieties have all colimits) while, in general, regular categories do not need to have all coequalizers.
+<-->
+
+
+
+
+
 
 ## References
 
@@ -93,3 +109,5 @@ I also recommend the section on metatheorems in the introduction of
 
 nLab has all definitions I skipped and also valuable further information. 
 - https://ncatlab.org/nlab/show/regular+category
+
+- {cite}`kell-powe:adjunctions`
