@@ -383,23 +383,26 @@ document.write(`
 <div class="section" id="sets-and-rectangular-bands-with-involution">
 <h2>Sets and Rectangular Bands with Involution<a class="headerlink" href="#sets-and-rectangular-bands-with-involution" title="Permalink to this heading">#</a></h2>
 <p>This is Example 2 in <span id="id1">[<a class="reference internal" href="../intro.html#id7" title="Ralph McKenzie. An algebraic version of categorical equivalence for varieties and more general algebraic categories. Logic and Algebra, 1996.">McKenzie, 1996</a>]</span>.</p>
-<p>The category <span class="math notranslate nohighlight">\(\sf Set\)</span> is equivalent to the category <span class="math notranslate nohighlight">\(\sf RBI\)</span> of “rectangular bands with involution”, that is, to the category of algebras <span class="math notranslate nohighlight">\(B\)</span> with a unary operation <span class="math notranslate nohighlight">\(s\)</span> and a binary operation <span class="math notranslate nohighlight">\(\cdot\)</span> satisfying</p>
-<div class="amsmath math notranslate nohighlight" id="equation-21e44e28-2774-42db-8a14-94083387aa54">
-<span class="eqno">(4)<a class="headerlink" href="#equation-21e44e28-2774-42db-8a14-94083387aa54" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<p>Consider algebras (which I call RBI-algebras for now) given by a unary operation <span class="math notranslate nohighlight">\(s\)</span> and a binary operation <span class="math notranslate nohighlight">\(\cdot\)</span> satisfying the equations</p>
+<div class="amsmath math notranslate nohighlight" id="equation-cc6a329f-3680-498a-8d4e-7b9ce554ccfd">
+<span class="eqno">(4)<a class="headerlink" href="#equation-cc6a329f-3680-498a-8d4e-7b9ce554ccfd" title="Permalink to this equation">#</a></span>\[\begin{gather}
 x\cdot (y\cdot z) = (x\cdot y)\cdot z\\
 x\cdot y \cdot z = x\cdot z\\
 x\cdot x = x\\
 s(s(x)) = x
 \end{gather}\]</div>
-<p><strong>Remark:</strong> To interpret the equations one can think of elements <span class="math notranslate nohighlight">\(x\)</span> as pairs <span class="math notranslate nohighlight">\((a,b)\)</span> with operations defined by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7208de6c-3fa8-45b0-bad4-f458450a042a">
-<span class="eqno">(5)<a class="headerlink" href="#equation-7208de6c-3fa8-45b0-bad4-f458450a042a" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<p><strong>Fact:</strong> Every RBI-algebra <span class="math notranslate nohighlight">\(B\)</span> is of the form <span class="math notranslate nohighlight">\(B=A\times A\)</span>.</p>
+<p>We can say more: The category <span class="math notranslate nohighlight">\(\sf RBI\)</span> of RBI-algebras (“RBI” as in “rectangular bands with involution”) is equivalent to the category <span class="math notranslate nohighlight">\(\sf Set\)</span>.</p>
+<p><strong>Observation:</strong> One can interpret the equations thinking of the elements of an RBI-algebra as pairs <span class="math notranslate nohighlight">\((a,b)\)</span> with operations defined by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0d0dbbe7-53c0-47f5-ba99-78b046bc380c">
+<span class="eqno">(5)<a class="headerlink" href="#equation-0d0dbbe7-53c0-47f5-ba99-78b046bc380c" title="Permalink to this equation">#</a></span>\[\begin{gather}
 (a,b) \cdot (c,d)=(a,d)\\
 s(a,b)=(b,a)
 \end{gather}\]</div>
+<p>In other words, every set <span class="math notranslate nohighlight">\(A\)</span> gives rise to an RBI-algebra <span class="math notranslate nohighlight">\(A^2\)</span>.</p>
 <p><strong>Exercise:</strong> Show that (with <span class="math notranslate nohighlight">\(s\)</span> and <span class="math notranslate nohighlight">\(\cdot\)</span> defined as in the remark above) the operation <span class="math notranslate nohighlight">\(H\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-30b4056a-cc03-4881-8883-16d8aae94b80">
-<span class="eqno">(6)<a class="headerlink" href="#equation-30b4056a-cc03-4881-8883-16d8aae94b80" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-830f1e4e-1406-446e-a70e-3f0701efc480">
+<span class="eqno">(6)<a class="headerlink" href="#equation-830f1e4e-1406-446e-a70e-3f0701efc480" title="Permalink to this equation">#</a></span>\[\begin{align}
 {\sf Set} &amp; \stackrel H ⟶ \sf RBI\\
 A &amp; \ \mapsto \ (A^2,s,\cdot)
 \end{align}\]</div>
@@ -409,22 +412,26 @@ A &amp; \ \mapsto \ (A^2,s,\cdot)
 <li><p><span class="math notranslate nohighlight">\(H\)</span> is essentially surjective.</p></li>
 <li><p><span class="math notranslate nohighlight">\(H\)</span> is full and faithful.</p></li>
 </ul>
-<p><strong>Remark/Question:</strong> The category <span class="math notranslate nohighlight">\(\sf Set\)</span> can be seen as a category of algebras defined by no operations and no equations. As we have seen <span class="math notranslate nohighlight">\(\sf Set\)</span> is equivalent to the category of rectangular bands with involution defined by a much more sophisticated algebraic theory. Is there a general theory that explains which algebraic theories give rise to equivalent categories of algebras? Conversely, given a category of algebras, can we classify the algebraic theories that give rise to equivalent categories of algebras?</p>
-<p>The proof of the previous exercise can be decomposed into two steps. Instead of doing <span class="math notranslate nohighlight">\(\sf Set \to RBI\)</span> in one go we want to introduce an intermediate step <span class="math notranslate nohighlight">\(\sf Set \to Set^{[2]}\to RBI\)</span>. The reason to do this is that the first step will turn out to be a general method, while the second step will contain the reasoning particular to the situation at hand.</p>
-<p><strong>Exercise:</strong> The category <span class="math notranslate nohighlight">\(\sf Set^{[2]}\)</span> has as objects sets <span class="math notranslate nohighlight">\(A^2=A\times A = \{(a,b) \mid a,b \in A\}\)</span> with operations formed from projections <span class="math notranslate nohighlight">\(p^n_i:A^n\to A\)</span>, <span class="math notranslate nohighlight">\(p^n_i(x_1,\ldots x_n)=x_i\)</span>.</p>
+<p>One aspect that makes equivalences like this interesting is that they may not preserve free algebras:</p>
+<p><strong>Exercise:</strong> Show that the free RBI over <span class="math notranslate nohighlight">\(X\)</span> has <span class="math notranslate nohighlight">\((2X)^2\)</span> elements.</p>
+<p><strong>Remark/Question:</strong> The category <span class="math notranslate nohighlight">\(\sf Set\)</span> can be seen as a category of algebras defined by no operations and no equations. As we have seen <span class="math notranslate nohighlight">\(\sf Set^{[2]}\)</span> is equivalent to RBI which is defined by a much more sophisticated algebraic theory. Is there a general theory that explains which algebraic theories give rise to equivalent categories of algebras? Conversely, given a category of algebras, can we classify all equivalent categories?</p>
+<p>To answer these and similar questions is the purpose of  Morita equivalence.</p>
+<p>As a warm-up, we notice that the proof of the previous exercise can be decomposed into two steps. Instead of doing <span class="math notranslate nohighlight">\(\sf Set \to RBI\)</span> in one go we want to introduce an intermediate step <span class="math notranslate nohighlight">\(\sf Set \to Set^{[2]}\to RBI\)</span>. The reason to do this is that the first step will turn out to be part of a general method.</p>
+<p><strong>Exercise:</strong> The category <span class="math notranslate nohighlight">\(\sf Set^{[2]}\)</span> has as objects sets <span class="math notranslate nohighlight">\(A^2=A\times A = \{(a,b) \mid a,b \in A\}\)</span> with operations formed from projections <span class="math notranslate nohighlight">\(p^n_i:A^n\to A\)</span>, <span class="math notranslate nohighlight">\(p^n_i(x_1,\ldots x_n)=x_i\)</span> and tupling.</p>
 <ul>
-<li><p>List the four operation <span class="math notranslate nohighlight">\(A^2\to A^2\)</span>, which we will call <span class="math notranslate nohighlight">\(id\)</span>, <span class="math notranslate nohighlight">\(l\)</span> (for left), <span class="math notranslate nohighlight">\(r\)</span> (for right), <span class="math notranslate nohighlight">\(s\)</span> (for swap).</p></li>
+<li><p>List the four operations <span class="math notranslate nohighlight">\(A^2\to A^2\)</span>, which we will call <span class="math notranslate nohighlight">\(id\)</span>, <span class="math notranslate nohighlight">\(l\)</span> (for left), <span class="math notranslate nohighlight">\(r\)</span> (for right), <span class="math notranslate nohighlight">\(s\)</span> (for swap).</p></li>
+<li><p>More generally, the set of operations <span class="math notranslate nohighlight">\(A^m\to A^k\)</span> formed by projections and tupling is of cardinality <span class="math notranslate nohighlight">\(m^k\)</span>.</p></li>
 <li><p>Define an operation <span class="math notranslate nohighlight">\(\cdot\)</span> of type <span class="math notranslate nohighlight">\((A^2)^2 \to A^2\)</span> such that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4b492490-5536-4822-b732-45b9363da333">
-<span class="eqno">(7)<a class="headerlink" href="#equation-4b492490-5536-4822-b732-45b9363da333" title="Permalink to this equation">#</a></span>\[\begin{gather}
+<div class="amsmath math notranslate nohighlight" id="equation-b864007e-c792-4ff7-9587-76f7f0614e20">
+<span class="eqno">(7)<a class="headerlink" href="#equation-b864007e-c792-4ff7-9587-76f7f0614e20" title="Permalink to this equation">#</a></span>\[\begin{gather}
     x\cdot (y\cdot z) = (x\cdot y)\cdot z\\
     x\cdot y \cdot z = x\cdot z\\
     x\cdot x = x
     \end{gather}\]</div>
 </li>
 <li><p>Define <span class="math notranslate nohighlight">\(l\)</span> and <span class="math notranslate nohighlight">\(r\)</span> using <span class="math notranslate nohighlight">\(s\)</span> and <span class="math notranslate nohighlight">\(\cdot\)</span>.</p></li>
-<li><p>Show that a morphism <span class="math notranslate nohighlight">\(A^2\to B^2\)</span> compatible with projections must be of the form <span class="math notranslate nohighlight">\(f\times f\)</span> with <span class="math notranslate nohighlight">\(f:A\to B\)</span>.</p></li>
-<li><p>Show that the obvious functor <span class="math notranslate nohighlight">\(\sf Set\to Set^{[n]}\)</span> is an equivalence of categories.</p></li>
+<li><p>Show that a morphism <span class="math notranslate nohighlight">\(A^2\to B^2\)</span> compatible with maps defined from projections must be of the form <span class="math notranslate nohighlight">\((a,a')\mapsto (f(a),f(a'))\)</span> for some <span class="math notranslate nohighlight">\(f:A\to B\)</span>.</p></li>
+<li><p>Show that the obvious functor <span class="math notranslate nohighlight">\(\sf Set\to Set^{[2]}\)</span> is an equivalence of categories.</p></li>
 </ul>
 <p>(to be continued)</p>
 </div>
